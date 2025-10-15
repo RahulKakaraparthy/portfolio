@@ -1,7 +1,8 @@
 {
-  "name": "portfolio-frontend",
+  "name": "rahul-portfolio",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "https://rahulkakaraparthy.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
