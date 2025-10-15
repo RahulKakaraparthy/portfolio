@@ -1,12 +1,12 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom';
 import Login from './components/auth/Login';
 import Home from './components/Home';
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('token');
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: '/',
       element: isAuthenticated ? <Home /> : <Navigate to="/login" />,
