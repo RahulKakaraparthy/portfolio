@@ -1,19 +1,27 @@
 import React from 'react';
-import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom';
-import Login from './components/auth/Login';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 const App = () => {
-  const isAuthenticated = !!localStorage.getItem('token');
-
   const router = createHashRouter([
     {
       path: '/',
-      element: isAuthenticated ? <Home /> : <Navigate to="/login" />,
+      element: <Home />
     },
     {
-      path: '/login',
-      element: isAuthenticated ? <Navigate to="/" /> : <Login />,
+      path: '/experience',
+      element: <Experience />
+    },
+    {
+      path: '/skills',
+      element: <Skills />
+    },
+    {
+      path: '/projects',
+      element: <Projects />
     }
   ], {
     future: {
