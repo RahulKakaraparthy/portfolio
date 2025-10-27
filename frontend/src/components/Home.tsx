@@ -41,35 +41,75 @@ const Home = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="container mx-auto px-6 lg:px-12 pt-40 pb-32">
-        <div className="max-w-5xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">
-          <p className="font-mono text-[#64ffda] mb-6 text-sm tracking-wider">Hi, my name is</p>
-          <h1 className="text-6xl sm:text-7xl font-bold text-slate-200 mb-4 leading-tight">
-            Rahul Kakaraparthy.
-          </h1>
-          <h2 className="text-5xl sm:text-6xl font-bold text-slate-400 mb-8 leading-tight">
-            I build reliable cloud infrastructure.
-          </h2>
-          
-          <div className="max-w-xl mb-12">
-            <p className="text-lg text-slate-400 leading-relaxed">
-              I'm a Senior DevOps Engineer specializing in building and scaling cloud infrastructure. 
-              Currently focused on architecting robust Kubernetes platforms and implementing GitOps practices
-              to streamline deployments and enhance system reliability.
-            </p>
+      {/* Hero Section */}
+      <section className="relative container mx-auto px-6 lg:px-12 pt-32 pb-20">
+        <div className="relative flex items-start justify-between">
+          {/* Text Content */}
+          <div className="space-y-5 max-w-2xl">
+            <div className="space-y-3">
+              <h1 className="font-mono text-[#64ffda] text-sm sm:text-base">Hi, my name is</h1>
+              <h2 className="text-4xl sm:text-7xl font-bold text-slate-300">Rahul Kakaraparthy.</h2>
+              <h3 className="text-4xl sm:text-7xl font-bold text-slate-500">I build things for the cloud.</h3>
+            </div>
+            <p className="text-base sm:text-lg text-slate-400 max-w-2xl">{description}</p>
+
+            {/* Call to Action Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <button onClick={() => setIsContactOpen(true)} className="px-7 py-4 font-mono text-sm text-[#64ffda] border border-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors duration-300">
+                Get In Touch
+              </button>
+              <PDFDownloadLink 
+                document={<ResumePDF />}
+                fileName="Rahul_Kakaraparthy_Resume.pdf"
+                className="px-7 py-4 font-mono text-sm text-[#64ffda] border border-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors duration-300"
+              >
+                {({ blob, url, loading, error }) =>
+                  loading ? 'Loading...' : 'Download Resume'
+                }
+              </PDFDownloadLink>
+            </div>
           </div>
 
-          <PDFDownloadLink
-            document={<ResumePDF />}
-            fileName="Rahul_Kakaraparthy_Resume.pdf"
-            className="inline-flex items-center px-8 py-4 border-[1.5px] border-[#64ffda] text-[#64ffda] 
-                      rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-all duration-300 ease-in-out"
-          >
-            {({ blob, url, loading, error }) =>
-              loading ? 'Preparing Resume...' : 'Download Resume'
-            }
-          </PDFDownloadLink>
+          {/* Animation Container */}
+          <div className="hidden lg:block relative w-[600px] h-[400px] rounded-lg overflow-hidden">
+            <img
+              src="https://cdn.dribbble.com/users/1059583/screenshots/4171367/coding-freak.gif"
+              alt="Developer coding animation"
+              className="w-full h-full object-cover rounded-lg"
+            />
+            {/* Overlay Screens */}
+            <div className="absolute top-0 right-0 p-4 grid grid-cols-1 gap-4">
+              <div className="w-32 h-24 bg-slate-800/80 backdrop-blur rounded-lg border border-slate-700/50 shadow-lg">
+                <div className="w-full h-full rounded-lg overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif"
+                    alt="Monitoring dashboard"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="w-32 h-24 bg-slate-800/80 backdrop-blur rounded-lg border border-slate-700/50 shadow-lg">
+                <div className="w-full h-full rounded-lg overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+                    alt="Data visualization"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="w-32 h-24 bg-slate-800/80 backdrop-blur rounded-lg border border-slate-700/50 shadow-lg">
+                <div className="w-full h-full rounded-lg overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/l378c04F2fjeZ7vH2/giphy.gif"
+                    alt="Cloud infrastructure"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
         {/* Featured Section */}
         <div className="mt-32 max-w-4xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.3s_forwards]">
