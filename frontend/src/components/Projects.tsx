@@ -49,31 +49,8 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  // If the first project is the portfolio, show the DevOps architecture diagram at the top
-  const portfolioProject = projects[0];
   return (
     <PageContainer>
-      {portfolioProject && portfolioProject.title.includes('Portfolio') && (
-        <div className="mb-10">
-          <h2 className="text-3xl font-bold text-slate-200 mb-4 flex items-center gap-3">
-            <span>DevOps Architecture Diagram</span>
-            <span role="img" aria-label="diagram">🗂️</span>
-          </h2>
-          <div className="w-full max-w-3xl mx-auto rounded-lg border border-slate-700 bg-[#0a192f] p-4 shadow-lg flex flex-col items-center">
-            <img
-              src={"/portfolio-devops-architecture.gif"}
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/portfolio-devops-architecture.svg'; }}
-              alt="DevOps CI/CD and Deployment Diagram"
-              className="w-full max-w-2xl rounded border border-slate-600 bg-[#0a192f]"
-              style={{ minHeight: 200 }}
-            />
-            <div className="text-xs text-slate-400 mt-2 text-center">
-              If the animation is unavailable, it will fall back to the static SVG. You can also
-              <a href="/portfolio-devops-architecture.svg" className="underline text-[#64ffda] ml-1" target="_blank" rel="noopener noreferrer">open the SVG directly</a>.
-            </div>
-          </div>
-        </div>
-      )}
       <div className="grid grid-cols-1 gap-8">
         {projects.map((project, index) => (
           <div key={index} className="bg-[#112240] rounded-lg p-6 hover:bg-[#112240]/70 transition-colors duration-300">
