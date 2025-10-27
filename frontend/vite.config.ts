@@ -16,14 +16,15 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     cssMinify: true,
+    chunkSizeWarningLimit: 1600,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
-        },
-      },
+          pdf: ['@react-pdf/renderer']
+        }
+      }
     },
-    sourcemap: false,
-    chunkSizeWarningLimit: 1000,
+    sourcemap: false
   }
 })

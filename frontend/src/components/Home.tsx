@@ -12,13 +12,19 @@ const Home = () => {
     <main className="min-h-screen bg-[#0a192f] selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       {/* Shooting stars background (non-interactive, behind content) */}
-      <div className="shooting-stars pointer-events-none fixed inset-0 -z-10">
-        <span className="shooting-star absolute top-[8%] left-[5%]" style={{ animationDelay: '0s', animationDuration: '1.2s' }} />
-        <span className="shooting-star absolute top-[25%] left-[10%]" style={{ animationDelay: '1s', animationDuration: '1.6s' }} />
-        <span className="shooting-star absolute top-[40%] left-[15%]" style={{ animationDelay: '0.6s', animationDuration: '1.3s' }} />
-        <span className="shooting-star absolute top-[60%] left-[20%]" style={{ animationDelay: '1.6s', animationDuration: '1.8s' }} />
-        <span className="shooting-star absolute top-[30%] left-[60%]" style={{ animationDelay: '0.3s', animationDuration: '1.1s' }} />
-        <span className="shooting-star absolute top-[50%] left-[75%]" style={{ animationDelay: '0.9s', animationDuration: '1.4s' }} />
+            <div className="shooting-stars">
+        {[...Array(12)].map((_, i) => (
+          <span
+            key={i}
+            className="shooting-star"
+            style={{
+              top: `${Math.random() * 90}%`,
+              left: '-100px',
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${1 + Math.random() * 1.5}s`
+            }}
+          />
+        ))}
       </div>
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-[#0a192f]/90 backdrop-blur-md border-b border-slate-800/40">
