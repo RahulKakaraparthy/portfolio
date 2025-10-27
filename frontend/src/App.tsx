@@ -7,11 +7,13 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
 import StarfieldBackground from './components/StarfieldBackground';
+import SpotlightCursor from './components/SpotlightCursor';
 
 const RootLayout: React.FC = () => (
   <>
     <StarfieldBackground />
     <Navbar />
+    <SpotlightCursor />
     <Outlet />
   </>
 );
