@@ -12,7 +12,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Personal Portfolio (This Site)",
-    description: `A modern, full-stack portfolio website showcasing my skills, experience, and projects. Built with React, TypeScript, Tailwind CSS, and Node.js, it features a custom animated starfield background, interactive sections, and a CI/CD pipeline for automated deployment.\n\n**Architecture diagram available at the top of this page.**`,
+    description: `A modern, full-stack portfolio website built with a DevOps-first mindset.\n\n**DevOps Deployment Overview:**\n- Source code is managed on GitHub.\n- On every push to main, GitHub Actions CI/CD pipeline is triggered.\n- Frontend (React/Vite/Tailwind) is built and deployed to GitHub Pages (static hosting).\n- Backend (Node.js/Express) is containerized with Docker and can be deployed to any Docker-compatible server.\n- Nginx is used for static file serving and reverse proxy.\n- Docker Compose orchestrates multi-container local/prod environments.\n- All builds, tests, and deployments are automated.\n\n**See the DevOps architecture diagram below.**`,
     technologies: [
       "React",
       "TypeScript",
@@ -25,14 +25,14 @@ const projects: Project[] = [
       "GitHub Actions"
     ],
     achievements: [
-      "Custom animated starfield and interactive UI",
-      "Modular, reusable React component architecture",
-      "Automated CI/CD with GitHub Actions and Docker Compose",
-      "Frontend deployed to GitHub Pages, backend containerized",
-      "Responsive design and accessibility best practices",
+      "Automated CI/CD with GitHub Actions",
+      "Frontend deployed to GitHub Pages",
+      "Backend containerized and ready for cloud/server deployment",
+      "Infrastructure as Code with Docker Compose",
+      "Zero-downtime deploys and fast rollbacks",
       "Live project updates via main branch push"
     ],
-    image: "https://raw.githubusercontent.com/RahulKakaraparthy/portfolio/main/README-architecture.png"
+    image: "/portfolio-devops-architecture.mmd"
   },
   {
     title: "Enterprise Kubernetes Platform",
@@ -49,22 +49,34 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  // If the first project is the portfolio, show the architecture diagram at the top
+  // If the first project is the portfolio, show the DevOps architecture diagram at the top
   const portfolioProject = projects[0];
   return (
     <PageContainer>
       {portfolioProject && portfolioProject.title.includes('Portfolio') && portfolioProject.image && (
         <div className="mb-10">
           <h2 className="text-3xl font-bold text-slate-200 mb-4 flex items-center gap-3">
-            <span>Portfolio Architecture Diagram</span>
-            <span role="img" aria-label="diagram">🗂️</span>
+            <span>DevOps Architecture Diagram</span>
+            <span role="img" aria-label="diagram">⚙️</span>
           </h2>
-          <img
-            src={portfolioProject.image}
-            alt="Portfolio Architecture Diagram"
-            className="w-full max-w-3xl rounded-lg border border-slate-700 mx-auto shadow-lg"
-            style={{ background: '#0a192f' }}
-          />
+          {/* Mermaid diagram embed (requires mermaid.js or markdown renderer) */}
+          <div className="w-full max-w-3xl mx-auto rounded-lg border border-slate-700 bg-[#0a192f] p-4 shadow-lg overflow-x-auto">
+            <pre className="mermaid text-sm" style={{ background: 'none', color: '#64ffda' }}>{`
+graph TD
+    A[Developer Pushes to GitHub] -->|CI Trigger| B[GitHub Actions CI/CD]
+    B --> C[Build Frontend (Vite/React)]
+    B --> D[Build Backend (Node.js/Express)]
+    C --> E[Docker Build Frontend Image]
+    D --> F[Docker Build Backend Image]
+    E --> G[Push Frontend Image to Registry]
+    F --> H[Push Backend Image to Registry]
+    G --> I[Deploy Frontend to GitHub Pages]
+    H --> J[Deploy Backend to Server (Docker Compose)]
+    I --> K[User Accesses Portfolio Website]
+    J --> K
+`}</pre>
+            <div className="text-xs text-slate-400 mt-2">(If diagram does not render, view <a href="https://github.com/RahulKakaraparthy/portfolio/blob/main/frontend/public/portfolio-devops-architecture.mmd" className="underline text-[#64ffda]" target="_blank" rel="noopener noreferrer">raw diagram</a>.)</div>
+          </div>
         </div>
       )}
       <div className="grid grid-cols-1 gap-8">
