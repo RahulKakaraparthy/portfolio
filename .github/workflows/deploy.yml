@@ -31,7 +31,7 @@ jobs:
         working-directory: ./frontend
         run: |
           npm ci
-          npm install typescript@latest
+          npm install typescript@latest terser --save-dev
 
       - name: Build Frontend
         working-directory: ./frontend
