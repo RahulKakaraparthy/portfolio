@@ -1,0 +1,162 @@
+import React from 'react';
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+
+const styles = StyleSheet.create({
+  page: {
+    padding: 30,
+    backgroundColor: 'white',
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+  },
+  header: {
+    marginBottom: 20,
+  },
+  name: {
+    fontSize: 24,
+    marginBottom: 10,
+    fontWeight: 'bold',
+  },
+  contact: {
+    fontSize: 10,
+    marginBottom: 3,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    marginBottom: 10,
+    fontWeight: 'bold',
+  },
+  summary: {
+    fontSize: 10,
+    marginBottom: 10,
+    lineHeight: 1.4,
+  },
+  toolStack: {
+    fontSize: 10,
+    marginBottom: 5,
+    marginLeft: 10,
+  },
+  experienceItem: {
+    marginBottom: 15,
+  },
+  jobTitle: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginBottom: 3,
+  },
+  company: {
+    fontSize: 12,
+    marginBottom: 2,
+  },
+  period: {
+    fontSize: 10,
+    fontStyle: 'italic',
+    marginBottom: 5,
+  },
+  bullet: {
+    fontSize: 10,
+    marginBottom: 2,
+    marginLeft: 10,
+    lineHeight: 1.4,
+  },
+  education: {
+    fontSize: 10,
+    marginBottom: 3,
+  },
+  highlight: {
+    fontSize: 10,
+    marginBottom: 3,
+    marginLeft: 10,
+  }
+
+const ResumePDF = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.name}>Rahul Kakaraparthy</Text>
+        <Text style={styles.contact}>Location: Toronto, Ontario</Text>
+        <Text style={styles.contact}>Phone: +1 647-739-5277</Text>
+        <Text style={styles.contact}>Email: rahulganesh.kakaraparthy@gmail.com</Text>
+        <Text style={styles.contact}>LinkedIn: www.linkedin.com/in/rahul-kakaraparthy-782437138</Text>
+      </View>
+
+      {/* Summary */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Professional Summary</Text>
+        <Text style={styles.skillItem}>
+          Senior DevOps Engineer with 8+ years of experience in cloud infrastructure, CI/CD, and DevOps practices. 
+          Expertise in Azure/AWS, Kubernetes, and infrastructure automation.
+        </Text>
+      </View>
+
+      {/* Experience */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Professional Experience</Text>
+        
+        <View style={styles.experienceItem}>
+          <Text style={styles.jobTitle}>Senior Software Engineer – DevOps</Text>
+          <Text style={styles.company}>FIS Global</Text>
+          <Text style={styles.period}>Feb 2022 – Present</Text>
+          <Text style={styles.achievement}>• Designed and maintained CI/CD pipelines using Azure DevOps and Jenkins</Text>
+          <Text style={styles.achievement}>• Implemented security scanning with Veracode, Checkmarx, and CXOne</Text>
+          <Text style={styles.achievement}>• Managed AKS clusters and Azure Container Registry</Text>
+          <Text style={styles.achievement}>• Automated Azure infrastructure using Terraform and ARM templates</Text>
+        </View>
+
+        <View style={styles.experienceItem}>
+          <Text style={styles.jobTitle}>DevOps Engineer</Text>
+          <Text style={styles.company}>Fidelity Investments</Text>
+          <Text style={styles.period}>Mar 2019 – Feb 2022</Text>
+          <Text style={styles.achievement}>• Built AWS-based CI/CD frameworks with Jenkins and Terraform</Text>
+          <Text style={styles.achievement}>• Implemented GitOps workflows using ArgoCD</Text>
+          <Text style={styles.achievement}>• Reduced release cycle time by 50% through automation</Text>
+        </View>
+
+        <View style={styles.experienceItem}>
+          <Text style={styles.jobTitle}>Cloud Engineer</Text>
+          <Text style={styles.company}>Accenture</Text>
+          <Text style={styles.period}>Aug 2016 – Jan 2019</Text>
+          <Text style={styles.achievement}>• Migrated infrastructure to AWS using Terraform and Ansible</Text>
+          <Text style={styles.achievement}>• Developed IAM automation and CloudFormation templates</Text>
+          <Text style={styles.achievement}>• Implemented monitoring solutions with CloudWatch</Text>
+        </View>
+      </View>
+
+      {/* Skills */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Technical Skills</Text>
+        
+        <View style={styles.skillSection}>
+          <Text style={styles.skillCategory}>Cloud Platforms</Text>
+          <Text style={styles.skillItem}>Azure (AKS, ACR, Functions, App Services), AWS (EC2, EKS, S3, RDS)</Text>
+        </View>
+        
+        <View style={styles.skillSection}>
+          <Text style={styles.skillCategory}>DevOps & CI/CD</Text>
+          <Text style={styles.skillItem}>Azure DevOps, Jenkins, ArgoCD, Docker, Kubernetes, Helm</Text>
+        </View>
+        
+        <View style={styles.skillSection}>
+          <Text style={styles.skillCategory}>Infrastructure as Code</Text>
+          <Text style={styles.skillItem}>Terraform, ARM Templates, Ansible, CloudFormation</Text>
+        </View>
+        
+        <View style={styles.skillSection}>
+          <Text style={styles.skillCategory}>Security & Monitoring</Text>
+          <Text style={styles.skillItem}>Veracode, Checkmarx, Azure Monitor, App Insights, ELK Stack</Text>
+        </View>
+      </View>
+
+      {/* Education */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Education</Text>
+        <Text style={styles.jobTitle}>Bachelor of Technology – Computer Science Engineering</Text>
+        <Text style={styles.company}>JNTU – India, 2015</Text>
+      </View>
+    </Page>
+  </Document>
+);
+
+export default ResumePDF;
