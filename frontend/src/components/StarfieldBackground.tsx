@@ -38,8 +38,8 @@ const StarfieldBackground: React.FC = () => {
     let spawnCooldown = 0; // seconds until next possible meteor
 
     const config = {
-      starCountBase: 220,
-      starCountDesktop: 420,
+      starCountBase: 500,
+      starCountDesktop: 1000,
       meteorMinInterval: 6, // seconds
       meteorChancePerSec: 0.12,
       milkyWayAngle: -20 * Math.PI / 180, // -20deg
