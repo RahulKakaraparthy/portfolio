@@ -162,7 +162,7 @@ const Home = () => {
         <div className="mt-32 opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
           <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-4">
             <span className="font-mono text-[#64ffda] text-sm mr-2">04.</span>
-            Why Hire Me
+            Why Hire Me?
           </h3>
 
           {/* Lead copy */}
@@ -174,67 +174,9 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Image feature cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <div className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40">
-              <div className="absolute inset-0">
-                <img
-                  src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop"
-                  alt="Reliable cloud architecture"
-                  className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/60 to-transparent" />
-              </div>
-              <div className="relative p-6 flex flex-col h-56 justify-end">
-                <h5 className="text-lg font-semibold text-slate-200">Reliability & Quality</h5>
-                <p className="text-slate-400 text-sm mt-2">
-                  Production-grade standards, clear SLOs, and robust CI/CD ensure consistent, dependable outcomes.
-                </p>
-              </div>
-            </div>
+          {/* Expandable image feature cards */}
 
-            {/* Card 2 */}
-            <div className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40">
-              <div className="absolute inset-0">
-                <img
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop"
-                  alt="Data-driven dashboards"
-                  className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/60 to-transparent" />
-              </div>
-              <div className="relative p-6 flex flex-col h-56 justify-end">
-                <h5 className="text-lg font-semibold text-slate-200">Data‑Driven Results</h5>
-                <p className="text-slate-400 text-sm mt-2">
-                  Metrics first: measurable gains in deployment speed, incident reduction, and MTTR.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40">
-              <div className="absolute inset-0">
-                <img
-                  src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1600&auto=format&fit=crop"
-                  alt="Secure and scalable cloud"
-                  className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/60 to-transparent" />
-              </div>
-              <div className="relative p-6 flex flex-col h-56 justify-end">
-                <h5 className="text-lg font-semibold text-slate-200">Secure, Scalable Cloud</h5>
-                <p className="text-slate-400 text-sm mt-2">
-                  Defense-in-depth, IaC, and GitOps—built to scale with security as a default.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Stats strip removed as requested */}
+          <WhyHireMeCards />
         </div>
       </section>
 
@@ -245,6 +187,92 @@ const Home = () => {
         </p>
       </footer>
     </main>
+  );
+};
+
+// --- WhyHireMeCards: extracted for cleaner JSX and to avoid inline hooks ---
+const WhyHireMeCards: React.FC = () => {
+  const [open, setOpen] = React.useState<number | null>(null);
+  const cards = [
+    {
+      title: 'Reliability & Quality',
+      img: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop',
+      alt: 'Reliable cloud architecture',
+      desc: 'Production-grade standards, clear SLOs, and robust CI/CD ensure consistent, dependable outcomes.',
+      points: [
+        '99.9%+ uptime track record',
+        'Automated testing and deployment pipelines',
+        'Continuous improvement and monitoring',
+      ],
+    },
+    {
+      title: 'Data‑Driven Results',
+      img: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop',
+      alt: 'Data-driven dashboards',
+      desc: 'Metrics first: measurable gains in deployment speed, incident reduction, and MTTR.',
+      points: [
+        '40–50% faster deployments',
+        '90% fewer incidents',
+        'Real-time dashboards and actionable insights',
+      ],
+    },
+    {
+      title: 'Secure, Scalable Cloud',
+      img: 'https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1600&auto=format&fit=crop',
+      alt: 'Secure and scalable cloud',
+      desc: 'Defense-in-depth, IaC, and GitOps—built to scale with security as a default.',
+      points: [
+        'Zero-trust security model',
+        'Infrastructure as Code (IaC) best practices',
+        'Proactive compliance and audit readiness',
+      ],
+    },
+  ];
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {cards.map((card, i) => (
+        <div
+          key={card.title}
+          className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40 cursor-pointer transition-shadow hover:shadow-lg"
+          tabIndex={0}
+          onClick={() => setOpen(open === i ? null : i)}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setOpen(open === i ? null : i); }}
+          aria-expanded={open === i}
+        >
+          <div className="absolute inset-0">
+            <img
+              src={card.img}
+              alt={card.alt}
+              className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/60 to-transparent" />
+          </div>
+          <div className="relative p-6 flex flex-col h-56 justify-end">
+            <h5 className="text-lg font-semibold text-slate-200">{card.title}</h5>
+            <p className="text-slate-400 text-sm mt-2">{card.desc}</p>
+            <button
+              className="mt-3 text-[#64ffda] text-xs font-mono underline underline-offset-2 focus:outline-none"
+              tabIndex={-1}
+              aria-label={open === i ? `Hide details for ${card.title}` : `Show details for ${card.title}`}
+              onClick={e => { e.stopPropagation(); setOpen(open === i ? null : i); }}
+            >
+              {open === i ? 'Hide details' : 'Show details'}
+            </button>
+            <div
+              className={`transition-all duration-300 overflow-hidden ${open === i ? 'max-h-40 mt-3 opacity-100' : 'max-h-0 opacity-0'}`}
+              aria-hidden={open !== i}
+            >
+              <ul className="pl-4 list-disc text-slate-300 text-xs space-y-2">
+                {card.points.map((pt, j) => (
+                  <li key={j}>{pt}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
