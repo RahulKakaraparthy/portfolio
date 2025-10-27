@@ -40,6 +40,15 @@ const WorkflowDiagram = () => {
       ]
     },
     {
+      category: "Security & Compliance",
+      items: [
+        { icon: <SiVault />, name: "Veracode" },
+        { icon: <SiVault />, name: "Checkmarx" },
+        { icon: <SiVault />, name: "CXOne" },
+        { icon: <FaCloud />, name: "Trivy" }
+      ]
+    },
+    {
       category: "Monitoring & Security",
       items: [
         { icon: <FaCloud />, name: "Azure Monitor" },

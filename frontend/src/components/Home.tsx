@@ -134,6 +134,64 @@ const Home = () => {
           </h3>
           <WorkflowDiagram />
         </div>
+
+        {/* Why Hire Me Section */}
+        <div className="mt-32 max-w-4xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
+          <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-8">
+            <span className="font-mono text-[#64ffda] text-sm mr-2">04.</span>
+            Why Hire Me
+          </h3>
+          
+          <div className="space-y-6">
+            <div className="bg-[#112240] rounded-lg p-8">
+              <h4 className="text-xl font-semibold text-[#64ffda] mb-4">Technical Excellence & Innovation</h4>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
+                  <span className="text-slate-300">
+                    Expert in cloud-native architecture with deep expertise in Azure/AWS ecosystems, implementing scalable solutions using AKS/EKS, containerization, and microservices
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
+                  <span className="text-slate-300">
+                    Advanced security implementation experience with Veracode, Checkmarx, and CXOne for vulnerability scanning, alongside Azure Key Vault and HashiCorp Vault for secrets management
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
+                  <span className="text-slate-300">
+                    Proven track record of optimizing CI/CD pipelines, reducing deployment times by 40-50% through automation and GitOps practices
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-[#112240] rounded-lg p-8">
+              <h4 className="text-xl font-semibold text-[#64ffda] mb-4">Leadership & Problem Solving</h4>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
+                  <span className="text-slate-300">
+                    Successfully led infrastructure modernization initiatives, mentored junior engineers, and implemented best practices across teams
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
+                  <span className="text-slate-300">
+                    Demonstrated ability to design and implement complex cloud architectures while maintaining high availability and security standards
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
+                  <span className="text-slate-300">
+                    Strong focus on infrastructure security, compliance, and cost optimization through automated governance and monitoring
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer */}
