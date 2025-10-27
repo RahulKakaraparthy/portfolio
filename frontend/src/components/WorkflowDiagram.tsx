@@ -14,6 +14,141 @@ const WorkflowDiagram = () => {
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
 
   const toolDetails: { [key: string]: { description: string; details: string[] } } = {
+    "AWS": {
+      description: "Amazon Web Services cloud infrastructure and services",
+      details: [
+        "Managed large-scale AWS infrastructure with multiple VPCs and Transit Gateways",
+        "Implemented AWS Organizations for multi-account management",
+        "Designed serverless architectures using Lambda and API Gateway",
+        "Set up DR strategies with cross-region replication"
+      ]
+    },
+    "Terraform": {
+      description: "Infrastructure as Code automation tool",
+      details: [
+        "Developed reusable Terraform modules for standardized deployments",
+        "Managed complex state files with remote backends and state locking",
+        "Implemented custom providers for specific requirements",
+        "Automated multi-cloud infrastructure provisioning"
+      ]
+    },
+    "Ansible": {
+      description: "Configuration management and automation platform",
+      details: [
+        "Created dynamic inventories for cloud-based infrastructure",
+        "Developed custom Ansible roles for application deployment",
+        "Implemented configuration management at scale",
+        "Automated system patching and maintenance tasks"
+      ]
+    },
+    "Linux": {
+      description: "Core operating system and server management",
+      details: [
+        "Managed large-scale Linux server deployments",
+        "Implemented security hardening and compliance measures",
+        "Automated system maintenance and monitoring",
+        "Developed shell scripts for process automation"
+      ]
+    },
+    "Docker": {
+      description: "Container platform for application packaging",
+      details: [
+        "Created optimized multi-stage Docker builds",
+        "Implemented container security best practices",
+        "Managed private container registries",
+        "Developed CI/CD pipelines for container builds"
+      ]
+    },
+    "ArgoCD": {
+      description: "GitOps continuous delivery tool for Kubernetes",
+      details: [
+        "Implemented GitOps workflows for multiple environments",
+        "Set up automated sync policies and drift detection",
+        "Managed application rollouts and rollbacks",
+        "Integrated with CI pipelines for automated deployments"
+      ]
+    },
+    "Azure Repos": {
+      description: "Source code management in Azure DevOps",
+      details: [
+        "Managed branching strategies and policies",
+        "Implemented code review workflows",
+        "Set up repository security and access controls",
+        "Integrated with CI/CD pipelines"
+      ]
+    },
+    "Azure Boards": {
+      description: "Project management and tracking tool",
+      details: [
+        "Managed agile development processes",
+        "Created custom dashboards and reports",
+        "Integrated with CI/CD for work item tracking",
+        "Automated status updates and notifications"
+      ]
+    },
+    "Jenkins": {
+      description: "Continuous Integration server",
+      details: [
+        "Developed complex pipelines using Groovy DSL",
+        "Managed distributed build environments",
+        "Implemented automated testing frameworks",
+        "Created custom Jenkins plugins and shared libraries"
+      ]
+    },
+    "CXOne": {
+      description: "Security testing and vulnerability management",
+      details: [
+        "Integrated security scanning in CI/CD pipelines",
+        "Managed vulnerability assessment workflows",
+        "Generated compliance reports",
+        "Implemented security gates in deployment process"
+      ]
+    },
+    "Trivy": {
+      description: "Container and filesystem vulnerability scanner",
+      details: [
+        "Implemented container image scanning in CI/CD",
+        "Set up vulnerability databases and updates",
+        "Created custom scanning policies",
+        "Integrated with container registry workflows"
+      ]
+    },
+    "Azure Monitor": {
+      description: "Comprehensive monitoring solution",
+      details: [
+        "Set up end-to-end monitoring for cloud resources",
+        "Created custom dashboards and alerts",
+        "Implemented auto-scaling rules",
+        "Managed log analytics and metrics collection"
+      ]
+    },
+    "App Insights": {
+      description: "Application performance monitoring",
+      details: [
+        "Implemented application telemetry",
+        "Created custom metrics and KPIs",
+        "Set up availability tests",
+        "Managed performance monitoring and alerts"
+      ]
+    },
+    "Log Analytics": {
+      description: "Log management and analysis platform",
+      details: [
+        "Created custom log queries and workbooks",
+        "Set up log collection from multiple sources",
+        "Implemented log-based alerting",
+        "Managed log retention and archival policies"
+      ]
+    },
+    "Azure AD": {
+      description: "Identity and access management",
+      details: [
+        "Implemented role-based access control",
+        "Managed service principals and managed identities",
+        "Set up conditional access policies",
+        "Integrated with on-premises Active Directory"
+      ]
+    },
     "Azure": {
       description: "Primary cloud platform for enterprise infrastructure and services",
       details: [
