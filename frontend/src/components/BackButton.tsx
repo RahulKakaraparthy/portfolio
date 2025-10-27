@@ -1,14 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const BackButton: React.FC = () => {
+interface BackButtonProps {
+  inline?: boolean; // when true, place button in normal flow to avoid overlap
+}
+
+const BackButton: React.FC<BackButtonProps> = ({ inline = false }) => {
   const navigate = useNavigate();
+
+  const baseClasses = "px-4 py-2 font-mono text-sm text-[#64ffda] border border-[#64ffda] rounded-lg hover:bg-[#64ffda]/10 transition-colors duration-300 flex items-center gap-2";
+  const fixedPos = "fixed top-28 right-4 sm:right-6 lg:right-12 z-50";
+  const inlinePos = "relative ml-auto mb-4"; // sits at top of container without overlapping
 
   return (
     <button
       onClick={() => navigate(-1)}
-      className="fixed top-28 right-6 lg:right-12 px-4 py-2 font-mono text-sm text-[#64ffda] border border-[#64ffda] rounded-lg 
-                 hover:bg-[#64ffda]/10 transition-colors duration-300 flex items-center gap-2 z-50"
+      className={`${inline ? inlinePos : fixedPos} ${baseClasses}`}
       aria-label="Go back"
     >
       <svg 
