@@ -61,13 +61,15 @@ const Projects = () => {
           </h2>
           <div className="w-full max-w-3xl mx-auto rounded-lg border border-slate-700 bg-[#0a192f] p-4 shadow-lg flex flex-col items-center">
             <img
-              src={"/portfolio-devops-architecture.svg"}
+              src={"/portfolio-devops-architecture.gif"}
+              onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/portfolio-devops-architecture.svg'; }}
               alt="DevOps CI/CD and Deployment Diagram"
               className="w-full max-w-2xl rounded border border-slate-600 bg-[#0a192f]"
               style={{ minHeight: 200 }}
             />
-            <div className="text-xs text-slate-400 mt-2">
-              (If diagram does not load, <a href="/portfolio-devops-architecture.svg" className="underline text-[#64ffda]" target="_blank" rel="noopener noreferrer">view the SVG directly</a>.)
+            <div className="text-xs text-slate-400 mt-2 text-center">
+              If the animation is unavailable, it will fall back to the static SVG. You can also
+              <a href="/portfolio-devops-architecture.svg" className="underline text-[#64ffda] ml-1" target="_blank" rel="noopener noreferrer">open the SVG directly</a>.
             </div>
           </div>
         </div>
