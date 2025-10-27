@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaAws, FaDocker, FaGithub, FaJenkins, FaLinux } from 'react-icons/fa';
-import { SiKubernetes, SiTerraform, SiAnsible, SiGrafana, SiPrometheus, SiElasticsearch, SiArgo, SiAzure, SiVault } from 'react-icons/si';
+import { FaAws, FaDocker, FaGithub, FaJenkins, FaLinux, FaCloud } from 'react-icons/fa';
+import { SiKubernetes, SiTerraform, SiAnsible, SiGrafana, SiPrometheus, SiElasticsearch, SiArgo, SiVault } from 'react-icons/si';
 
 const WorkflowDiagram = () => {
   const tools = [
@@ -26,7 +26,7 @@ const WorkflowDiagram = () => {
       items: [
         { icon: <FaJenkins />, name: "Jenkins" },
         { icon: <FaGithub />, name: "GitHub" },
-        { icon: <FaGithub />, name: "Azure DevOps" }
+        { icon: <FaCloud />, name: "Azure DevOps" }
       ]
     },
     {
