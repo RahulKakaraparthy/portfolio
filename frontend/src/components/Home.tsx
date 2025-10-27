@@ -199,7 +199,7 @@ const Home = () => {
             <div className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40">
               <div className="absolute inset-0">
                 <img
-                  src="https://images.unsplash.com/photo-1551281044-8d8d3d8f6a6d?q=80&w=1600&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop"
                   alt="Data-driven dashboards"
                   className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
@@ -234,21 +234,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Stats strip */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            <div className="rounded-lg bg-[#112240] p-5 text-center border border-slate-700/40">
-              <div className="text-3xl font-bold text-[#64ffda]">40–50%</div>
-              <div className="text-slate-400 text-sm">Faster deployments</div>
-            </div>
-            <div className="rounded-lg bg-[#112240] p-5 text-center border border-slate-700/40">
-              <div className="text-3xl font-bold text-[#64ffda]">90%</div>
-              <div className="text-slate-400 text-sm">Fewer incidents</div>
-            </div>
-            <div className="rounded-lg bg-[#112240] p-5 text-center border border-slate-700/40">
-              <div className="text-3xl font-bold text-[#64ffda]">60%</div>
-              <div className="text-slate-400 text-sm">MTTR reduction</div>
-            </div>
-          </div>
+          {/* Stats strip removed as requested */}
         </div>
       </section>
 
