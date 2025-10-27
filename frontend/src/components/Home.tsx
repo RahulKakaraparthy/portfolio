@@ -34,8 +34,6 @@ const Home = () => {
         </div>
       </nav>
 
-      <ThemeToggle />
-
       {/* Hero Section */}
       <div className="container mx-auto px-6 lg:px-12 pt-40 pb-32">
         <div className="max-w-5xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">

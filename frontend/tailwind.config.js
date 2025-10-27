@@ -19,24 +19,18 @@ export default {
           dark: '#020c1b',
         },
       },
-      backgroundColor: {
-        light: {
-          primary: '#ffffff',
-          secondary: '#f8fafc',
-        },
-        dark: {
-          primary: '#0a192f',
-          secondary: '#112240',
-        },
+      animation: {
+        fadeIn: 'fadeIn 0.5s ease-in forwards',
+        slideIn: 'slideIn 0.5s ease-out forwards',
       },
-      textColor: {
-        light: {
-          primary: '#1e293b',
-          secondary: '#475569',
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        dark: {
-          primary: '#e2e8f0',
-          secondary: '#94a3b8',
+        slideIn: {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },
     },
