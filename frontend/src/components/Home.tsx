@@ -10,33 +10,7 @@ const Home = () => {
   return (
     <main className="min-h-screen bg-[#0a192f] selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-      {/* Shooting stars background (non-interactive, behind content) */}
-            <div className="particles-background">
-        {[...Array(30)].map((_, i) => {
-          const tx = -100 + Math.random() * 200;
-          const ty = -100 + Math.random() * 200;
-          const duration = 15 + Math.random() * 15;
-          const delay = Math.random() * 10;
-          const size = 2 + Math.random() * 2;
-          
-          return (
-            <span
-              key={i}
-              className="particle"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                width: `${size}px`,
-                height: `${size}px`,
-                '--tx': tx,
-                '--ty': ty,
-                animationDuration: `${duration}s`,
-                animationDelay: `${delay}s`,
-              } as React.CSSProperties}
-            />
-          );
-        })}
-      </div>
+      {/* Global starfield background renders via RootLayout */}
       {/* Global Navbar is rendered via the app layout */}
 
       {/* Hero Section */}
