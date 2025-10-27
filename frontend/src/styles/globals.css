@@ -32,52 +32,53 @@ body {
   }
 }
 
-/* Shooting stars background styles */
-.shooting-stars {
+/* Particle background animation */
+.particles-background {
   position: fixed;
   inset: 0;
-  overflow: hidden;
   z-index: -10;
+  overflow: hidden;
   background: transparent;
 }
 
-.shooting-star {
+.particle {
   position: absolute;
-  left: -100px;
-  top: 50%;
-  height: 2px;
-  background: linear-gradient(90deg, #64ffda, transparent);
-  border-radius: 50%;
-  animation: shooting-star linear infinite;
-  opacity: 0;
-  transform-origin: right;
-}
-
-.shooting-star::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 4px;
+  width: 3px;
+  height: 3px;
   background: #64ffda;
   border-radius: 50%;
-  box-shadow: 0 0 15px #64ffda, 0 0 30px #64ffda;
+  pointer-events: none;
+  opacity: 0;
+  animation: float-particle linear infinite;
 }
 
-@keyframes shooting-star {
+.particle::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(circle, rgba(100,255,218,0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+@keyframes float-particle {
   0% {
-    transform: translateX(0) rotate(-45deg);
-    opacity: 1;
-    width: 0;
-  }
-  10% {
-    width: 100px;
-    opacity: 1;
-  }
-  20%, 100% {
-    transform: translateX(calc(100vw + 200px)) rotate(-45deg);
+    transform: translate(0, 0);
     opacity: 0;
-    width: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(
+      calc(var(--tx, 0) * 1px),
+      calc(var(--ty, 0) * 1px)
+    );
+    opacity: 0;
   }
 }

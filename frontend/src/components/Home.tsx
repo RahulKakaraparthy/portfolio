@@ -12,19 +12,31 @@ const Home = () => {
     <main className="min-h-screen bg-[#0a192f] selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       {/* Shooting stars background (non-interactive, behind content) */}
-            <div className="shooting-stars">
-        {[...Array(12)].map((_, i) => (
-          <span
-            key={i}
-            className="shooting-star"
-            style={{
-              top: `${Math.random() * 90}%`,
-              left: '-100px',
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${1 + Math.random() * 1.5}s`
-            }}
-          />
-        ))}
+            <div className="particles-background">
+        {[...Array(30)].map((_, i) => {
+          const tx = -100 + Math.random() * 200;
+          const ty = -100 + Math.random() * 200;
+          const duration = 15 + Math.random() * 15;
+          const delay = Math.random() * 10;
+          const size = 2 + Math.random() * 2;
+          
+          return (
+            <span
+              key={i}
+              className="particle"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                width: `${size}px`,
+                height: `${size}px`,
+                '--tx': tx,
+                '--ty': ty,
+                animationDuration: `${duration}s`,
+                animationDelay: `${delay}s`,
+              } as React.CSSProperties}
+            />
+          );
+        })}
       </div>
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-[#0a192f]/90 backdrop-blur-md border-b border-slate-800/40">
