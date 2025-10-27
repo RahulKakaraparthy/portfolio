@@ -1,5 +1,6 @@
 import React from 'react';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import Home from './components/Home';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
@@ -29,7 +30,11 @@ const App = () => {
     }
   });
 
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 };
 
 export default App;

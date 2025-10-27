@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { ThemeToggle } from './ThemeToggle';
+
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#0a192f] text-slate-400">
+    <div className="min-h-screen bg-light-primary dark:bg-dark-primary text-light-secondary dark:text-slate-400 transition-colors duration-200">
       {/* Navigation */}
-      <nav className="fixed w-full z-10 bg-[#0a192f]/90 backdrop-blur-md border-b border-slate-800">
+      <nav className="fixed w-full z-10 bg-light-primary/90 dark:bg-dark-primary/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="text-[#64ffda] font-mono text-xl">RK</Link>
@@ -29,6 +31,8 @@ const Home = () => {
           </div>
         </div>
       </nav>
+
+      <ThemeToggle />
 
       {/* Hero Section */}
       <div className="container mx-auto px-6 pt-32 pb-16">
