@@ -90,7 +90,6 @@ const Home = () => {
       <section className="container mx-auto px-6 lg:px-12">
         <div className="mt-32 max-w-4xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.3s_forwards]">
           <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-8">
-            <span className="font-mono text-[#64ffda] text-sm mr-2">01.</span>
             Featured Experience
           </h3>
           <div className="grid gap-6">
@@ -118,7 +117,6 @@ const Home = () => {
         {/* Skills Section */}
         <div className="mt-32 max-w-4xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.5s_forwards]">
           <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-8">
-            <span className="font-mono text-[#64ffda] text-sm mr-2">02.</span>
             Core Technologies
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 max-w-xl">
@@ -152,7 +150,6 @@ const Home = () => {
         {/* Tool Stack & Workflow Section */}
         <div className="mt-32 opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
           <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-8">
-            <span className="font-mono text-[#64ffda] text-sm mr-2">03.</span>
             Tool Stack & Workflow
           </h3>
           <WorkflowDiagram />
@@ -161,7 +158,6 @@ const Home = () => {
         {/* Why Hire Me Section */}
         <div className="mt-32 opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
           <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-4">
-            <span className="font-mono text-[#64ffda] text-sm mr-2">04.</span>
             Why Hire Me?
           </h3>
 
