@@ -53,29 +53,22 @@ const Projects = () => {
   const portfolioProject = projects[0];
   return (
     <PageContainer>
-      {portfolioProject && portfolioProject.title.includes('Portfolio') && portfolioProject.image && (
+      {portfolioProject && portfolioProject.title.includes('Portfolio') && (
         <div className="mb-10">
           <h2 className="text-3xl font-bold text-slate-200 mb-4 flex items-center gap-3">
-            <span>DevOps Architecture Diagram</span>
-            <span role="img" aria-label="diagram">⚙️</span>
+            <span>DevOps Architecture Animation</span>
+            <span role="img" aria-label="animation">🎬</span>
           </h2>
-          {/* Mermaid diagram embed (requires mermaid.js or markdown renderer) */}
-          <div className="w-full max-w-3xl mx-auto rounded-lg border border-slate-700 bg-[#0a192f] p-4 shadow-lg overflow-x-auto">
-            <pre className="mermaid text-sm" style={{ background: 'none', color: '#64ffda' }}>{`
-graph TD
-    A[Developer Pushes to GitHub] -->|CI Trigger| B[GitHub Actions CI/CD]
-    B --> C[Build Frontend (Vite/React)]
-    B --> D[Build Backend (Node.js/Express)]
-    C --> E[Docker Build Frontend Image]
-    D --> F[Docker Build Backend Image]
-    E --> G[Push Frontend Image to Registry]
-    F --> H[Push Backend Image to Registry]
-    G --> I[Deploy Frontend to GitHub Pages]
-    H --> J[Deploy Backend to Server (Docker Compose)]
-    I --> K[User Accesses Portfolio Website]
-    J --> K
-`}</pre>
-            <div className="text-xs text-slate-400 mt-2">(If diagram does not render, view <a href="https://github.com/RahulKakaraparthy/portfolio/blob/main/frontend/public/portfolio-devops-architecture.mmd" className="underline text-[#64ffda]" target="_blank" rel="noopener noreferrer">raw diagram</a>.)</div>
+          <div className="w-full max-w-3xl mx-auto rounded-lg border border-slate-700 bg-[#0a192f] p-4 shadow-lg flex flex-col items-center">
+            <img
+              src={"/portfolio-devops-architecture.gif"}
+              alt="DevOps CI/CD and Deployment Animation"
+              className="w-full max-w-2xl rounded border border-slate-600 bg-[#0a192f]"
+              style={{ minHeight: 200 }}
+            />
+            <div className="text-xs text-slate-400 mt-2">
+              (If animation does not load, <a href="/portfolio-devops-architecture.gif" className="underline text-[#64ffda]" target="_blank" rel="noopener noreferrer">view the GIF directly</a>.)
+            </div>
           </div>
         </div>
       )}
