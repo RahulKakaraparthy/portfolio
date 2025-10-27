@@ -56,18 +56,18 @@ const Projects = () => {
       {portfolioProject && portfolioProject.title.includes('Portfolio') && (
         <div className="mb-10">
           <h2 className="text-3xl font-bold text-slate-200 mb-4 flex items-center gap-3">
-            <span>DevOps Architecture Animation</span>
-            <span role="img" aria-label="animation">🎬</span>
+            <span>DevOps Architecture Diagram</span>
+            <span role="img" aria-label="diagram">🗂️</span>
           </h2>
           <div className="w-full max-w-3xl mx-auto rounded-lg border border-slate-700 bg-[#0a192f] p-4 shadow-lg flex flex-col items-center">
             <img
-              src={"/portfolio-devops-architecture.gif"}
-              alt="DevOps CI/CD and Deployment Animation"
+              src={"/portfolio-devops-architecture.svg"}
+              alt="DevOps CI/CD and Deployment Diagram"
               className="w-full max-w-2xl rounded border border-slate-600 bg-[#0a192f]"
               style={{ minHeight: 200 }}
             />
             <div className="text-xs text-slate-400 mt-2">
-              (If animation does not load, <a href="/portfolio-devops-architecture.gif" className="underline text-[#64ffda]" target="_blank" rel="noopener noreferrer">view the GIF directly</a>.)
+              (If diagram does not load, <a href="/portfolio-devops-architecture.svg" className="underline text-[#64ffda]" target="_blank" rel="noopener noreferrer">view the SVG directly</a>.)
             </div>
           </div>
         </div>
