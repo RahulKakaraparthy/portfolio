@@ -11,6 +11,15 @@ const Home = () => {
   return (
     <main className="min-h-screen bg-[#0a192f] selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      {/* Shooting stars background (non-interactive, behind content) */}
+      <div className="shooting-stars pointer-events-none fixed inset-0 -z-10">
+        <span className="shooting-star absolute top-[8%] left-[5%]" style={{ animationDelay: '0s', animationDuration: '1.2s' }} />
+        <span className="shooting-star absolute top-[25%] left-[10%]" style={{ animationDelay: '1s', animationDuration: '1.6s' }} />
+        <span className="shooting-star absolute top-[40%] left-[15%]" style={{ animationDelay: '0.6s', animationDuration: '1.3s' }} />
+        <span className="shooting-star absolute top-[60%] left-[20%]" style={{ animationDelay: '1.6s', animationDuration: '1.8s' }} />
+        <span className="shooting-star absolute top-[30%] left-[60%]" style={{ animationDelay: '0.3s', animationDuration: '1.1s' }} />
+        <span className="shooting-star absolute top-[50%] left-[75%]" style={{ animationDelay: '0.9s', animationDuration: '1.4s' }} />
+      </div>
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-[#0a192f]/90 backdrop-blur-md border-b border-slate-800/40">
         <div className="container mx-auto px-6 lg:px-12">
@@ -29,13 +38,7 @@ const Home = () => {
                 <span className="text-[#64ffda] mr-2 font-normal tracking-wider">03.</span>
                 <span>Projects</span>
               </Link>
-              <button
-                onClick={() => setIsContactOpen(true)}
-                className="px-5 py-2.5 border-[1.5px] border-[#64ffda] text-[#64ffda] rounded font-mono text-sm 
-                         hover:bg-[#64ffda]/10 transition-all duration-300 ease-in-out"
-              >
-                Connect
-              </button>
+              {/* Connect button removed per request */}
             </div>
           </div>
         </div>
