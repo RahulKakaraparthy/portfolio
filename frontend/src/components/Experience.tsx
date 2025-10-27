@@ -13,14 +13,14 @@ const experiences: Experience[] = [
     company: "FIS Global",
     period: "Feb 2022 – Present",
     achievements: [
-      "Designed and maintained CI/CD pipelines using Jenkins (Groovy DSL), ArgoCD, and Helm for automated microservice deployments",
-      "Managed build processes with image scanning, signing, and versioned releases using Nexus and ACR",
-      "Automated provisioning of Azure and AWS resources via Terraform with Ansible integration",
-      "Integrated HashiCorp Vault for secure secret management and certificate rotation",
-      "Developed Helm charts for environment-specific Kubernetes deployments",
-      "Built Python automation tools for CI/CD pipeline health monitoring",
-      "Set up centralized logging with ELK, Prometheus, and Dynatrace",
-      "Mentored junior engineers and achieved 40% faster deployments"
+      "Designed and maintained CI/CD pipelines using Azure DevOps, Jenkins (Groovy DSL), and ArgoCD for automated deployments",
+      "Managed Azure Container Registry (ACR) with image scanning, signing, and versioned releases",
+      "Implemented Azure Kubernetes Service (AKS) clusters with advanced networking and security features",
+      "Automated provisioning of Azure resources (VNets, App Services, Functions) via Terraform and ARM templates",
+      "Integrated Azure Key Vault and HashiCorp Vault for secrets management and certificate rotation",
+      "Developed Azure DevOps pipelines and Helm charts for multi-environment Kubernetes deployments",
+      "Set up Azure Monitor, Application Insights, and Log Analytics for comprehensive monitoring",
+      "Achieved 40% faster deployments through Azure DevOps automation and container orchestration"
     ]
   },
   {

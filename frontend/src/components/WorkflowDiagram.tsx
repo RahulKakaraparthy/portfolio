@@ -5,6 +5,15 @@ import { SiKubernetes, SiTerraform, SiAnsible, SiGrafana, SiPrometheus, SiElasti
 const WorkflowDiagram = () => {
   const tools = [
     {
+      category: "Azure Cloud Services",
+      items: [
+        { icon: <FaCloud />, name: "Azure" },
+        { icon: <SiKubernetes />, name: "AKS" },
+        { icon: <FaDocker />, name: "ACR" },
+        { icon: <SiVault />, name: "Key Vault" }
+      ]
+    },
+    {
       category: "Infrastructure & Cloud",
       items: [
         { icon: <FaAws />, name: "AWS" },
@@ -22,20 +31,21 @@ const WorkflowDiagram = () => {
       ]
     },
     {
-      category: "CI/CD & Version Control",
+      category: "CI/CD & DevOps",
       items: [
-        { icon: <FaJenkins />, name: "Jenkins" },
-        { icon: <FaGithub />, name: "GitHub" },
-        { icon: <FaCloud />, name: "Azure DevOps" }
+        { icon: <FaCloud />, name: "Azure Pipelines" },
+        { icon: <FaCloud />, name: "Azure Repos" },
+        { icon: <FaCloud />, name: "Azure Boards" },
+        { icon: <FaJenkins />, name: "Jenkins" }
       ]
     },
     {
       category: "Monitoring & Security",
       items: [
-        { icon: <SiGrafana />, name: "Grafana" },
-        { icon: <SiPrometheus />, name: "Prometheus" },
-        { icon: <SiElasticsearch />, name: "ELK Stack" },
-        { icon: <SiVault />, name: "HashiCorp Vault" }
+        { icon: <FaCloud />, name: "Azure Monitor" },
+        { icon: <SiGrafana />, name: "App Insights" },
+        { icon: <SiPrometheus />, name: "Log Analytics" },
+        { icon: <SiVault />, name: "Azure AD" }
       ]
     }
   ];
