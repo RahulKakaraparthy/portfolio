@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Contact from './Contact';
+import WorkflowDiagram from './WorkflowDiagram';
 
 const Home = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -123,6 +124,15 @@ const Home = () => {
               <span className="text-slate-300">Python / Go / Shell</span>
             </div>
           </div>
+        </div>
+
+        {/* Tool Stack & Workflow Section */}
+        <div className="mt-32 opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
+          <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-8">
+            <span className="font-mono text-[#64ffda] text-sm mr-2">03.</span>
+            Tool Stack & Workflow
+          </h3>
+          <WorkflowDiagram />
         </div>
       </div>
 
