@@ -7,7 +7,7 @@ const BackButton: React.FC = () => {
   return (
     <button
       onClick={() => navigate(-1)}
-      className="fixed top-28 left-6 lg:left-12 px-4 py-2 font-mono text-sm text-[#64ffda] border border-[#64ffda] rounded-lg 
+      className="fixed top-28 right-6 lg:right-12 px-4 py-2 font-mono text-sm text-[#64ffda] border border-[#64ffda] rounded-lg 
                  hover:bg-[#64ffda]/10 transition-colors duration-300 flex items-center gap-2 z-50"
       aria-label="Go back"
     >
