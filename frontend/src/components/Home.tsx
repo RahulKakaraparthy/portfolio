@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Contact from './Contact';
 
 const Home = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
   return (
     <main className="min-h-screen bg-[#0a192f] selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
+      <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-[#0a192f]/90 backdrop-blur-md border-b border-slate-800/40">
         <div className="container mx-auto px-6 lg:px-12">
@@ -22,13 +25,13 @@ const Home = () => {
                 <span className="text-[#64ffda] mr-2 font-normal tracking-wider">03.</span>
                 <span>Projects</span>
               </Link>
-              <a href="https://linkedin.com/in/rahul-kakaraparthy" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="px-5 py-2.5 border-[1.5px] border-[#64ffda] text-[#64ffda] rounded font-mono text-sm 
-                          hover:bg-[#64ffda]/10 transition-all duration-300 ease-in-out">
+              <button
+                onClick={() => setIsContactOpen(true)}
+                className="px-5 py-2.5 border-[1.5px] border-[#64ffda] text-[#64ffda] rounded font-mono text-sm 
+                         hover:bg-[#64ffda]/10 transition-all duration-300 ease-in-out"
+              >
                 Connect
-              </a>
+              </button>
             </div>
           </div>
         </div>
