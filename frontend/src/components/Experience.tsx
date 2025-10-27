@@ -9,39 +9,43 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Senior DevOps Engineer",
-    company: "Leading Technology Company",
-    period: "2022 - Present",
+    title: "Senior Software Engineer – DevOps",
+    company: "FIS Global",
+    period: "Feb 2022 – Present",
     achievements: [
-      "Architected and managed large-scale Kubernetes (EKS) clusters supporting 200+ microservices",
-      "Led the implementation of GitOps practices using ArgoCD, reducing deployment incidents by 90%",
-      "Designed and implemented automated CI/CD pipelines in CircleCI with advanced caching and parallelization",
-      "Established enterprise-wide observability standards using Datadog and OpenTelemetry",
-      "Created custom Terraform modules and providers used by 50+ engineering teams",
-      "Implemented automated canary deployments with metric-based rollback capabilities"
+      "Designed and maintained CI/CD pipelines using Jenkins (Groovy DSL), ArgoCD, and Helm for automated microservice deployments",
+      "Managed build processes with image scanning, signing, and versioned releases using Nexus and ACR",
+      "Automated provisioning of Azure and AWS resources via Terraform with Ansible integration",
+      "Integrated HashiCorp Vault for secure secret management and certificate rotation",
+      "Developed Helm charts for environment-specific Kubernetes deployments",
+      "Built Python automation tools for CI/CD pipeline health monitoring",
+      "Set up centralized logging with ELK, Prometheus, and Dynatrace",
+      "Mentored junior engineers and achieved 40% faster deployments"
     ]
   },
   {
     title: "DevOps Engineer",
-    company: "Technology Firm",
-    period: "2019 - 2022",
+    company: "Fidelity Investments",
+    period: "Mar 2019 – Feb 2022",
     achievements: [
-      "Migrated legacy applications to containerized microservices architecture on EKS",
-      "Built comprehensive monitoring and alerting infrastructure using Datadog",
-      "Developed automated environment provisioning reducing setup time from days to hours",
-      "Implemented infrastructure as code practices using Terraform and AWS CloudFormation",
-      "Created custom Kubernetes operators for automated application lifecycle management"
+      "Built AWS-based CI/CD frameworks with Jenkins, Terraform, and Ansible",
+      "Implemented GitOps workflows using ArgoCD for continuous delivery",
+      "Automated infrastructure provisioning using Terraform modules",
+      "Enhanced infrastructure compliance via IAM governance and monitoring",
+      "Configured SAML/OIDC authentication with Okta",
+      "Reduced release cycle time by 50% through pipeline automation"
     ]
   },
   {
-    title: "Systems Engineer",
-    company: "Tech Solutions Inc",
-    period: "2017 - 2019",
+    title: "Cloud Engineer",
+    company: "Accenture",
+    period: "Aug 2016 – Jan 2019",
     achievements: [
-      "Managed and optimized AWS infrastructure including EC2, RDS, and S3 services",
-      "Implemented automated backup and disaster recovery procedures",
-      "Developed monitoring solutions using CloudWatch and custom metrics",
-      "Created automated deployment pipelines for web applications"
+      "Migrated and automated enterprise infrastructure using Terraform, Jenkins, and Ansible",
+      "Developed scripts for IAM audits and S3 lifecycle automation",
+      "Created CloudFormation templates for EC2, RDS, and VPC provisioning",
+      "Implemented application monitoring via CloudWatch and SNS alerting",
+      "Supported hybrid identity federation using Keycloak and Okta integrations"
     ]
   }
 ];

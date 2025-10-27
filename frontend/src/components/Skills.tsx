@@ -8,41 +8,63 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Infrastructure & Cloud (AWS)",
+    title: "Cloud Platforms",
     skills: [
-      "EKS cluster architecture",
-      "IAM roles and policies",
-      "VPC design",
-      "ECR image scanning",
-      "SSM/Secrets Manager",
-      "CloudWatch",
-      "S3 lifecycle policies",
-      "SQS/SNS messaging",
-      "Lambda automation",
-      "RDS/Aurora HA"
+      "Azure (Active Directory, Monitor, ACR)",
+      "AWS (EC2, VPC, S3, IAM, RDS)",
+      "Lambda Functions",
+      "CloudWatch Monitoring",
+      "Azure DevOps",
+      "Cloud Security",
+      "High Availability Design"
     ]
   },
   {
-    title: "Container & Orchestration",
+    title: "CI/CD & Automation",
     skills: [
-      "Kubernetes controllers & CRDs",
-      "Pod security policies",
-      "HPA with custom metrics",
-      "Service mesh (Istio/Linkerd)",
-      "Container optimization",
-      "Helm chart development",
-      "Custom admission controllers"
+      "Jenkins (Groovy DSL)",
+      "GitLab CI/CD",
+      "ArgoCD (GitOps)",
+      "Helm Charts",
+      "Nexus Repository",
+      "Automated Testing",
+      "Release Management"
     ]
   },
   {
-    title: "Infrastructure as Code",
+    title: "Infrastructure & Tools",
     skills: [
-      "Terraform modules",
-      "State management",
-      "Custom providers",
-      "ArgoCD application sets",
-      "GitOps automation",
-      "Drift detection"
+      "Terraform",
+      "Ansible",
+      "CloudFormation",
+      "HashiCorp Vault",
+      "Infrastructure as Code",
+      "Configuration Management",
+      "Automation Scripts"
+    ]
+  },
+  {
+    title: "Containers & Orchestration",
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "OpenShift",
+      "Operators",
+      "Ingress Controllers",
+      "RBAC",
+      "Container Security"
+    ]
+  },
+  {
+    title: "Monitoring & Security",
+    skills: [
+      "ELK Stack",
+      "Dynatrace",
+      "Prometheus",
+      "Grafana",
+      "Azure Monitor",
+      "SAML/OIDC",
+      "Security Best Practices"
     ]
   },
   {
