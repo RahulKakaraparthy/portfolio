@@ -1,4 +1,5 @@
 import React from 'react';
+import PageContainer from './PageContainer';
 
 interface Experience {
   title: string;
@@ -53,11 +54,9 @@ const experiences: Experience[] = [
 
 const Experience = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 pt-20">
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">Professional Experience</h2>
-        
-        <div className="space-y-12">
+    return (
+    <PageContainer>
+      <div className="space-y-12"
           {experiences.map((exp, index) => (
             <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
