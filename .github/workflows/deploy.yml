@@ -29,10 +29,14 @@ jobs:
 
       - name: Install Frontend Dependencies
         working-directory: ./frontend
-        run: npm ci
+        run: |
+          npm ci
+          npm install typescript@latest
 
       - name: Build Frontend
         working-directory: ./frontend
+        env:
+          CI: false
         run: |
           npm run build
           ls -la dist
@@ -42,6 +46,5 @@ jobs:
         with:
           folder: frontend/dist
           branch: gh-pages
-          target-folder: docs
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
