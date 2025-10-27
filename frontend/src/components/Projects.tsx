@@ -35,6 +35,77 @@ const projects: Project[] = [
     image: "/portfolio-devops-architecture.mmd"
   },
   {
+    title: "CI/CD Modernization for Payments Microservices (FIS Global)",
+    description: "Led the modernization of CI/CD for 50+ microservices using Azure DevOps, Jenkins (Groovy DSL), ArgoCD, and Helm. Standardized pipelines for build, test, security scanning, artifact management, and progressive delivery across environments.",
+    technologies: [
+      "Azure DevOps",
+      "Jenkins (Groovy)",
+      "ArgoCD",
+      "Helm",
+      "Nexus",
+      "Docker",
+      "Kubernetes"
+    ],
+    achievements: [
+      "40% faster deployments via pipeline automation",
+      "Golden pipeline templates reused across 50+ repos",
+      "Integrated SAST/DAST and container scanning gates",
+      "Versioned releases and SBOM published to Nexus"
+    ]
+  },
+  {
+    title: "AKS Platform & Helm Chart Standardization (FIS Global)",
+    description: "Implemented Azure Kubernetes Service (AKS) clusters with enterprise networking, RBAC, and policy controls. Built standardized Helm charts supporting multi-env overlays, blue/green and canary strategies.",
+    technologies: [
+      "AKS",
+      "Helm",
+      "Kubernetes",
+      "Azure CNI",
+      "Ingress",
+      "RBAC",
+      "OPA/Policies"
+    ],
+    achievements: [
+      "Environment parity via values-driven Helm releases",
+      "Safer rollouts with canary/blue-green patterns",
+      "Reduced drift using GitOps and declarative manifests"
+    ]
+  },
+  {
+    title: "Secrets Management & Compliance Hardening (FIS Global)",
+    description: "Integrated Azure Key Vault and HashiCorp Vault for secrets, certificates, and dynamic creds. Automated certificate rotation and enforced least-privilege access with OIDC/SAML integrations.",
+    technologies: [
+      "Azure Key Vault",
+      "HashiCorp Vault",
+      "OIDC/SAML",
+      "Okta",
+      "Kubernetes",
+      "RBAC"
+    ],
+    achievements: [
+      "Zero secrets in repo; short-lived tokens for workloads",
+      "Automated cert rotation across microservices",
+      "Auditable access with policy-as-code"
+    ]
+  },
+  {
+    title: "Observability & SRE Enablement (FIS Global)",
+    description: "Established centralized logging, metrics, and tracing using Azure Monitor, App Insights, Log Analytics, Prometheus/Grafana, and Dynatrace. Built SLO dashboards and alerting to reduce MTTR.",
+    technologies: [
+      "Azure Monitor",
+      "Application Insights",
+      "Log Analytics",
+      "Prometheus",
+      "Grafana",
+      "Dynatrace"
+    ],
+    achievements: [
+      "Unified dashboards with golden signals (RED/USE)",
+      "Reduced MTTR with actionable alerts and runbooks",
+      "Proactive capacity and error budget tracking"
+    ]
+  },
+  {
     title: "Enterprise Kubernetes Platform",
     description: "Designed and implemented a multi-tenant Kubernetes platform supporting 200+ microservices with advanced GitOps workflows.",
     technologies: ["EKS", "ArgoCD", "Terraform", "Istio", "Datadog"],
