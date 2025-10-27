@@ -72,11 +72,13 @@ const Home = () => {
           </div>
 
           {/* Animation Container */}
-          <div className="hidden lg:block relative w-[600px] h-[400px] rounded-lg overflow-hidden">
+          <div className="hidden lg:block relative w-[420px] h-[280px] rounded-lg overflow-hidden">
             <img
-              src="https://cdn.dribbble.com/users/1059583/screenshots/4171367/coding-freak.gif"
+              src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif"
               alt="Developer coding animation"
-              className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
+              aria-hidden="true"
+              className="w-full h-full object-cover rounded-lg pointer-events-none"
             />
             {/* Overlay Screens */}
             <div className="absolute top-0 right-0 p-4 grid grid-cols-1 gap-4">
