@@ -43,28 +43,44 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Mobile avatar (under text) */}
-          <div className="mt-6 flex lg:hidden items-center justify-center">
-            <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-[#64ffda]/40 shadow-xl">
-              <img
-                src="/profile.png"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png'; }}
-                alt="Rahul Kakaraparthy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Desktop avatar (right side) */}
-          <div className="hidden lg:flex items-center justify-center">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden ring-4 ring-[#64ffda]/40 shadow-2xl">
-              <img
-                src="/profile.png"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png'; }}
-                alt="Rahul Kakaraparthy"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+          {/* Animation Container */}
+          <div className="hidden lg:block relative w-[420px] h-[280px] rounded-lg overflow-hidden">
+            <img
+              src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif"
+              alt="Developer coding animation"
+              loading="lazy"
+              aria-hidden="true"
+              className="w-full h-full object-cover rounded-lg pointer-events-none"
+            />
+            {/* Overlay Screens */}
+            <div className="absolute top-0 right-0 p-4 grid grid-cols-1 gap-4">
+              <div className="w-32 h-24 bg-slate-800/80 backdrop-blur rounded-lg border border-slate-700/50 shadow-lg">
+                <div className="w-full h-full rounded-lg overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif"
+                    alt="Monitoring dashboard"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="w-32 h-24 bg-slate-800/80 backdrop-blur rounded-lg border border-slate-700/50 shadow-lg">
+                <div className="w-full h-full rounded-lg overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+                    alt="Data visualization"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="w-32 h-24 bg-slate-800/80 backdrop-blur rounded-lg border border-slate-700/50 shadow-lg">
+                <div className="w-full h-full rounded-lg overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/l378c04F2fjeZ7vH2/giphy.gif"
+                    alt="Cloud infrastructure"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
