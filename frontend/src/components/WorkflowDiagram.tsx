@@ -1,8 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaAws, FaDocker, FaGithub, FaJenkins, FaLinux, FaCloud } from 'react-icons/fa';
 import { SiKubernetes, SiTerraform, SiAnsible, SiGrafana, SiPrometheus, SiElasticsearch, SiArgo, SiVault } from 'react-icons/si';
+import ToolModal from './ToolModal';
+
+interface Tool {
+  icon: JSX.Element;
+  name: string;
+  description: string;
+  details: string[];
+}
 
 const WorkflowDiagram = () => {
+  const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
+
+  const toolDetails: { [key: string]: { description: string; details: string[] } } = {
+    "Azure": {
+      description: "Primary cloud platform for enterprise infrastructure and services",
+      details: [
+        "Implemented complex networking with VNets, NSGs, and Azure Firewall",
+        "Managed scalable App Services and Azure Functions for microservices",
+        "Automated resource provisioning using ARM templates and Terraform",
+        "Implemented robust security measures with Azure AD and RBAC"
+      ]
+    },
+    "AKS": {
+      description: "Azure Kubernetes Service for container orchestration",
+      details: [
+        "Designed and deployed multi-node AKS clusters with advanced networking",
+        "Implemented pod security policies and network policies",
+        "Set up cluster autoscaling and node pools optimization",
+        "Managed cluster upgrades and patch management"
+      ]
+    },
+    "ACR": {
+      description: "Azure Container Registry for secure image management",
+      details: [
+        "Implemented vulnerability scanning for container images",
+        "Set up CI/CD pipelines with automated image builds and testing",
+        "Configured geo-replication for improved availability",
+        "Managed access control and image signing policies"
+      ]
+    },
+    "Key Vault": {
+      description: "Centralized secrets and certificate management",
+      details: [
+        "Implemented automated certificate rotation and management",
+        "Integrated with AKS for secure pod identity",
+        "Set up disaster recovery and backup policies",
+        "Managed access policies and audit logging"
+      ]
+    },
+    "Azure Pipelines": {
+      description: "CI/CD pipeline automation in Azure DevOps",
+      details: [
+        "Created multi-stage pipelines for build, test, and deployment",
+        "Implemented infrastructure as code deployments",
+        "Set up automated testing and security scanning",
+        "Managed release approvals and gates"
+      ]
+    },
+    "Veracode": {
+      description: "Static and dynamic security analysis",
+      details: [
+        "Integrated SAST scanning in CI/CD pipelines",
+        "Implemented security policy enforcement",
+        "Managed vulnerability remediation workflows",
+        "Generated compliance reports for audits"
+      ]
+    },
+    "Checkmarx": {
+      description: "Application security testing platform",
+      details: [
+        "Automated code security scanning in development lifecycle",
+        "Created custom security rules and policies",
+        "Integrated with Azure DevOps for issue tracking",
+        "Managed false positive suppression and verification"
+      ]
+    },
+    "Kubernetes": {
+      description: "Container orchestration and management",
+      details: [
+        "Designed highly available cluster architectures",
+        "Implemented custom controllers and operators",
+        "Managed service mesh with Istio",
+        "Set up GitOps workflows with ArgoCD"
+      ]
+    }
+  };
   const tools = [
     {
       category: "Azure Cloud Services",
@@ -78,10 +162,11 @@ const WorkflowDiagram = () => {
               
               <div className="grid grid-cols-2 gap-4">
                 {category.items.map((tool, toolIdx) => (
-                  <div 
+                  <button 
                     key={toolIdx}
-                    className="flex flex-col items-center justify-center p-4 bg-[#1b2d4d] rounded-lg
-                             hover:bg-[#233554] transition-all duration-300 group"
+                    onClick={() => toolDetails[tool.name] && setSelectedTool({ ...tool, ...toolDetails[tool.name] })}
+                    className="flex flex-col items-center justify-center p-4 bg-[#1b2d4d] rounded-lg w-full
+                             hover:bg-[#233554] transition-all duration-300 group cursor-pointer"
                   >
                     <div className="text-4xl text-[#64ffda] group-hover:text-[#64ffda]/80 mb-3 transition-colors duration-300">
                       {tool.icon}
@@ -89,7 +174,7 @@ const WorkflowDiagram = () => {
                     <span className="text-slate-300 text-sm font-mono group-hover:text-[#64ffda] transition-colors duration-300">
                       {tool.name}
                     </span>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
@@ -150,6 +235,15 @@ const WorkflowDiagram = () => {
           ))}
         </div>
       </div>
+
+      {/* Tool Details Modal */}
+      {selectedTool && (
+        <ToolModal
+          isOpen={true}
+          onClose={() => setSelectedTool(null)}
+          tool={selectedTool}
+        />
+      )}
     </div>
   );
 };
