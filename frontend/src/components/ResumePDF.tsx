@@ -1,5 +1,5 @@
 import React from 'react';
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Svg, Path, G } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   page: {
@@ -12,6 +12,16 @@ const styles = StyleSheet.create({
   },
   header: {
     marginBottom: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
+  headerLeft: {
+    flex: 1,
+  },
+  headerRight: {
+    width: 150,
+    marginLeft: 20,
   },
   name: {
     fontSize: 24,
@@ -75,12 +85,44 @@ const ResumePDF = () => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.header}>
-        <Text style={styles.name}>Rahul Kakaraparthy</Text>
-        <Text style={styles.contact}>Location: Toronto, Ontario</Text>
-        <Text style={styles.contact}>Phone: +1 647-739-5277</Text>
-        <Text style={styles.contact}>Email: rahulganesh.kakaraparthy@gmail.com</Text>
-        <Text style={styles.contact}>LinkedIn: www.linkedin.com/in/rahul-kakaraparthy-782437138</Text>
-        <Text style={styles.contact}>GitHub Portfolio: https://rahulkakaraparthy.github.io/portfolio/</Text>
+        <View style={styles.headerLeft}>
+          <Text style={styles.name}>Rahul Kakaraparthy</Text>
+          <Text style={styles.contact}>Location: Toronto, Ontario</Text>
+          <Text style={styles.contact}>Phone: +1 647-739-5277</Text>
+          <Text style={styles.contact}>Email: rahulganesh.kakaraparthy@gmail.com</Text>
+          <Text style={styles.contact}>LinkedIn: www.linkedin.com/in/rahul-kakaraparthy-782437138</Text>
+          <Text style={styles.contact}>GitHub Portfolio: https://rahulkakaraparthy.github.io/portfolio/</Text>
+        </View>
+        <View style={styles.headerRight}>
+          <Svg width={150} height={100} viewBox="0 0 100 80">
+            {/* Monitor Frame */}
+            <Path
+              d="M5 5 h90 v60 h-90 z"
+              stroke="#333"
+              strokeWidth={2}
+              fill="none"
+            />
+            {/* Monitor Stand */}
+            <Path
+              d="M40 65 h20 v10 h-20 z M45 75 h10 v5 h-10 z"
+              fill="#333"
+            />
+            {/* Code Lines */}
+            <G fill="#666">
+              <Path d="M15 15 h30 v2 h-30 z" />
+              <Path d="M15 25 h60 v2 h-60 z" />
+              <Path d="M15 35 h40 v2 h-40 z" />
+              <Path d="M15 45 h50 v2 h-50 z" />
+              <Path d="M15 55 h45 v2 h-45 z" />
+            </G>
+            {/* Small Screens on Wall */}
+            <G>
+              <Path d="M75 10 h15 v10 h-15 z" stroke="#333" fill="none" />
+              <Path d="M75 25 h15 v10 h-15 z" stroke="#333" fill="none" />
+              <Path d="M75 40 h15 v10 h-15 z" stroke="#333" fill="none" />
+            </G>
+          </Svg>
+        </View>
       </View>
 
       <View style={styles.section}>
