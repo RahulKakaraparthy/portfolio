@@ -54,31 +54,27 @@ const experiences: Experience[] = [
 
 const Experience = () => {
   return (
-    return (
     <PageContainer>
-      <div className="space-y-12"
-          {experiences.map((exp, index) => (
-            <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
-                  <p className="text-xl text-gray-400">{exp.company}</p>
-                </div>
-                <p className="text-lg text-blue-400">{exp.period}</p>
-              </div>
-              
-              <ul className="list-disc list-inside space-y-3">
-                {exp.achievements.map((achievement, i) => (
-                  <li key={i} className="text-gray-300">
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
+      <div className="space-y-12">
+        {experiences.map((exp, index) => (
+          <div key={index} className="bg-[#112240] rounded-lg p-6 hover:bg-[#112240]/70 transition-colors duration-300">
+            <div className="mb-4">
+              <h3 className="text-2xl text-slate-200 font-semibold">{exp.title}</h3>
+              <p className="text-[#64ffda] font-mono">{exp.company}</p>
+              <p className="text-slate-400 font-mono text-sm">{exp.period}</p>
             </div>
-          ))}
-        </div>
+            
+            <ul className="list-disc list-inside space-y-3">
+              {exp.achievements.map((achievement, i) => (
+                <li key={i} className="text-gray-300">
+                  {achievement}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </div>
+    </PageContainer>
   );
 };
 
