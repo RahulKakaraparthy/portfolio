@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Contact from './Contact';
 import WorkflowDiagram from './WorkflowDiagram';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import ResumePDF from './ResumePDF';
 
 const Home = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -57,11 +59,16 @@ const Home = () => {
             </p>
           </div>
 
-          <a href="mailto:rahulganesh.kakaraparthy@gmail.com"
-             className="inline-flex items-center px-8 py-4 border-[1.5px] border-[#64ffda] text-[#64ffda] 
-                        rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-all duration-300 ease-in-out">
-            Get In Touch
-          </a>
+          <PDFDownloadLink
+            document={<ResumePDF />}
+            fileName="Rahul_Kakaraparthy_Resume.pdf"
+            className="inline-flex items-center px-8 py-4 border-[1.5px] border-[#64ffda] text-[#64ffda] 
+                      rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-all duration-300 ease-in-out"
+          >
+            {({ blob, url, loading, error }) =>
+              loading ? 'Preparing Resume...' : 'Download Resume'
+            }
+          </PDFDownloadLink>
         </div>
 
         {/* Featured Section */}
