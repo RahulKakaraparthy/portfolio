@@ -7,6 +7,7 @@ import ResumePDF from './ResumePDF';
 
 const Home = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const description = "I'm a software engineer specializing in building exceptional cloud solutions and DevOps automation. Currently, I'm focused on building scalable, secure, and reliable infrastructure at Amazon Web Services.";
   return (
     <main className="min-h-screen bg-[#0a192f] selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
@@ -111,7 +112,8 @@ const Home = () => {
         </div>
       </section>
 
-        {/* Featured Section */}
+      {/* Featured Section */}
+      <section className="container mx-auto px-6 lg:px-12">
         <div className="mt-32 max-w-4xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.3s_forwards]">
           <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-8">
             <span className="font-mono text-[#64ffda] text-sm mr-2">01.</span>
@@ -239,7 +241,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
       <footer className="text-center pb-8 opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
