@@ -8,7 +8,7 @@ const Home = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const description = "I'm a software engineer specializing in building exceptional cloud solutions and DevOps automation. Currently, I'm focused on building scalable, secure, and reliable infrastructure at Amazon Web Services.";
   return (
-    <main className="min-h-screen bg-[#0a192f] selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
+    <main className="min-h-screen selection:bg-[#64ffda]/30 selection:text-[#64ffda]">
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       {/* Global starfield background renders via RootLayout */}
       {/* Global Navbar is rendered via the app layout */}

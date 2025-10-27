@@ -7,7 +7,7 @@ interface PageContainerProps {
 
 const PageContainer: React.FC<PageContainerProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-[#0a192f] py-28">
+    <div className="min-h-screen py-28">
       <BackButton />
       <div className="container mx-auto px-6 lg:px-12">
         {children}

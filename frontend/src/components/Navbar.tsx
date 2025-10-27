@@ -8,6 +8,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="text-[#64ffda] font-mono text-xl font-bold tracking-wider">RK</Link>
           <div className="flex items-center space-x-10">
+            <Link to="/" className="font-mono text-sm text-slate-300 hover:text-[#64ffda] transition-colors duration-300">
+              <span className="text-[#64ffda] mr-2 font-normal tracking-wider">00.</span>
+              <span>Home</span>
+            </Link>
             <Link to="/experience" className="font-mono text-sm text-slate-300 hover:text-[#64ffda] transition-colors duration-300">
               <span className="text-[#64ffda] mr-2 font-normal tracking-wider">01.</span>
               <span>Experience</span>
