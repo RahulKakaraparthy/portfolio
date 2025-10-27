@@ -159,59 +159,94 @@ const Home = () => {
         </div>
 
         {/* Why Hire Me Section */}
-        <div className="mt-32 max-w-4xl opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
-          <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-8">
+        <div className="mt-32 opacity-0 animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
+          <h3 className="flex items-center text-2xl text-slate-200 font-semibold mb-4">
             <span className="font-mono text-[#64ffda] text-sm mr-2">04.</span>
             Why Hire Me
           </h3>
-          
-          <div className="space-y-6">
-            <div className="bg-[#112240] rounded-lg p-8">
-              <h4 className="text-xl font-semibold text-[#64ffda] mb-4">Technical Excellence & Innovation</h4>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
-                  <span className="text-slate-300">
-                    Expert in cloud-native architecture with deep expertise in Azure/AWS ecosystems, implementing scalable solutions using AKS/EKS, containerization, and microservices
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
-                  <span className="text-slate-300">
-                    Advanced security implementation experience with Veracode, Checkmarx, and CXOne for vulnerability scanning, alongside Azure Key Vault and HashiCorp Vault for secrets management
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
-                  <span className="text-slate-300">
-                    Proven track record of optimizing CI/CD pipelines, reducing deployment times by 40-50% through automation and GitOps practices
-                  </span>
-                </li>
-              </ul>
+
+          {/* Lead copy */}
+          <div className="max-w-3xl mb-10">
+            <h4 className="text-xl font-semibold text-[#64ffda] mb-2">A Foundation of Trust and Excellence</h4>
+            <p className="text-slate-300">
+              I am committed to delivering not just code, but value. My work is built on a foundation of reliability, quality,
+              and a proven ability to solve complex problems with data-driven results.
+            </p>
+          </div>
+
+          {/* Image feature cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40">
+              <div className="absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop"
+                  alt="Reliable cloud architecture"
+                  className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/60 to-transparent" />
+              </div>
+              <div className="relative p-6 flex flex-col h-56 justify-end">
+                <h5 className="text-lg font-semibold text-slate-200">Reliability & Quality</h5>
+                <p className="text-slate-400 text-sm mt-2">
+                  Production-grade standards, clear SLOs, and robust CI/CD ensure consistent, dependable outcomes.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-[#112240] rounded-lg p-8">
-              <h4 className="text-xl font-semibold text-[#64ffda] mb-4">Leadership & Problem Solving</h4>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
-                  <span className="text-slate-300">
-                    Successfully led infrastructure modernization initiatives, mentored junior engineers, and implemented best practices across teams
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
-                  <span className="text-slate-300">
-                    Demonstrated ability to design and implement complex cloud architectures while maintaining high availability and security standards
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#64ffda] mr-3 pt-1">▹</span>
-                  <span className="text-slate-300">
-                    Strong focus on infrastructure security, compliance, and cost optimization through automated governance and monitoring
-                  </span>
-                </li>
-              </ul>
+            {/* Card 2 */}
+            <div className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40">
+              <div className="absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1551281044-8d8d3d8f6a6d?q=80&w=1600&auto=format&fit=crop"
+                  alt="Data-driven dashboards"
+                  className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/60 to-transparent" />
+              </div>
+              <div className="relative p-6 flex flex-col h-56 justify-end">
+                <h5 className="text-lg font-semibold text-slate-200">Data‑Driven Results</h5>
+                <p className="text-slate-400 text-sm mt-2">
+                  Metrics first: measurable gains in deployment speed, incident reduction, and MTTR.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group relative overflow-hidden rounded-xl bg-[#112240]/80 border border-slate-700/40">
+              <div className="absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1600&auto=format&fit=crop"
+                  alt="Secure and scalable cloud"
+                  className="h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/60 to-transparent" />
+              </div>
+              <div className="relative p-6 flex flex-col h-56 justify-end">
+                <h5 className="text-lg font-semibold text-slate-200">Secure, Scalable Cloud</h5>
+                <p className="text-slate-400 text-sm mt-2">
+                  Defense-in-depth, IaC, and GitOps—built to scale with security as a default.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats strip */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+            <div className="rounded-lg bg-[#112240] p-5 text-center border border-slate-700/40">
+              <div className="text-3xl font-bold text-[#64ffda]">40–50%</div>
+              <div className="text-slate-400 text-sm">Faster deployments</div>
+            </div>
+            <div className="rounded-lg bg-[#112240] p-5 text-center border border-slate-700/40">
+              <div className="text-3xl font-bold text-[#64ffda]">90%</div>
+              <div className="text-slate-400 text-sm">Fewer incidents</div>
+            </div>
+            <div className="rounded-lg bg-[#112240] p-5 text-center border border-slate-700/40">
+              <div className="text-3xl font-bold text-[#64ffda]">60%</div>
+              <div className="text-slate-400 text-sm">MTTR reduction</div>
             </div>
           </div>
         </div>
