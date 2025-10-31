@@ -3,10 +3,10 @@ import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   page: {
-    padding: 18,
+    padding: 20,
     backgroundColor: 'white',
-    fontSize: 7,
-    lineHeight: 1.2,
+    fontSize: 9,
+    lineHeight: 1.3,
     fontFamily: 'Helvetica',
   },
   // Cover Letter Page Styles
@@ -18,150 +18,156 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
   },
   coverName: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 3,
   },
   coverTitle: {
-    fontSize: 11,
+    fontSize: 12,
     marginBottom: 3,
     fontStyle: 'italic',
   },
   coverContact: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 1,
   },
   coverDate: {
     textAlign: 'right',
     marginBottom: 12,
-    fontSize: 8,
+    fontSize: 9,
   },
   coverSalutation: {
     marginBottom: 8,
-    fontSize: 8,
+    fontSize: 9,
     fontWeight: 'bold',
   },
   coverParagraph: {
-    fontSize: 8,
+    fontSize: 9,
     lineHeight: 1.4,
     marginBottom: 8,
     textAlign: 'justify',
   },
   coverClosing: {
     marginTop: 15,
-    fontSize: 8,
+    fontSize: 9,
     fontWeight: 'bold',
   },
   signature: {
-    fontSize: 9,
+    fontSize: 10,
     fontWeight: 'bold',
     marginTop: 10,
   },
   
   // Resume Pages Styles
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    marginBottom: 10,
+    marginBottom: 12,
     borderBottomWidth: 2,
     borderBottomColor: '#000',
-    paddingBottom: 6,
+    paddingBottom: 8,
+  },
+  headerTop: {
+    textAlign: 'center',
+    marginBottom: 6,
+  },
+  headerBottom: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   headerLeft: {
-    flex: 2,
+    flex: 1,
   },
   headerRight: {
     flex: 1,
     textAlign: 'right',
   },
   name: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 2,
   },
   title: {
-    fontSize: 9,
-    marginBottom: 3,
+    fontSize: 11,
+    marginBottom: 4,
     fontStyle: 'italic',
   },
   contact: {
-    fontSize: 6,
+    fontSize: 8,
     marginBottom: 1,
   },
   sectionTitle: {
-    fontSize: 9,
-    marginBottom: 3,
+    fontSize: 11,
+    marginBottom: 4,
     fontWeight: 'bold',
     backgroundColor: '#f0f0f0',
-    padding: 2,
-    marginTop: 5,
+    padding: 3,
+    marginTop: 6,
   },
   paragraph: {
-    fontSize: 6,
+    fontSize: 8,
     lineHeight: 1.3,
-    marginBottom: 3,
+    marginBottom: 4,
     textAlign: 'justify',
   },
   subsectionTitle: {
-    fontSize: 7,
+    fontSize: 9,
     fontWeight: 'bold',
-    marginBottom: 1,
-    marginTop: 2,
+    marginBottom: 2,
+    marginTop: 3,
   },
   jobTitle: {
-    fontSize: 7,
+    fontSize: 9,
     fontWeight: 'bold',
     marginBottom: 1,
   },
   company: {
-    fontSize: 6,
+    fontSize: 8,
     marginBottom: 1,
     fontStyle: 'italic',
   },
   period: {
-    fontSize: 6,
-    marginBottom: 1,
+    fontSize: 8,
+    marginBottom: 2,
     color: '#666',
   },
   bullet: {
-    fontSize: 6,
+    fontSize: 8,
     marginBottom: 1,
-    marginLeft: 5,
+    marginLeft: 8,
     lineHeight: 1.2,
   },
   skillCategory: {
-    fontSize: 6,
+    fontSize: 8,
     fontWeight: 'bold',
-    marginBottom: 1,
+    marginBottom: 2,
   },
   skillList: {
-    fontSize: 6,
+    fontSize: 8,
     marginBottom: 1,
-    marginLeft: 5,
+    marginLeft: 8,
   },
   education: {
-    fontSize: 6,
-    marginBottom: 1,
+    fontSize: 8,
+    marginBottom: 2,
   },
   highlight: {
-    fontSize: 6,
+    fontSize: 8,
     marginBottom: 1,
-    marginLeft: 5,
+    marginLeft: 8,
   },
   experienceItem: {
-    marginBottom: 5,
+    marginBottom: 6,
   },
   section: {
-    marginBottom: 4,
+    marginBottom: 6,
   },
   projectItem: {
-    marginBottom: 3,
+    marginBottom: 4,
   },
   achievementItem: {
-    fontSize: 6,
+    fontSize: 8,
     marginBottom: 1,
-    marginLeft: 5,
+    marginLeft: 8,
   },
 });
 
@@ -229,18 +235,22 @@ const ResumePDF = () => (
       <Text style={styles.signature}>Rahul Kakaraparthy</Text>
     </Page>
 
-    {/* Page 2: Professional Summary and Technical Skills */}
+    {/* Page 2: Professional Summary, Skills, and Experience */}
     <Page size="A4" style={styles.page}>
       <View style={styles.header}>
-        <View style={styles.headerLeft}>
+        <View style={styles.headerTop}>
           <Text style={styles.name}>Rahul Kakaraparthy</Text>
           <Text style={styles.title}>Senior DevOps Engineer | Cloud Infrastructure Architect</Text>
-          <Text style={styles.contact}>📧 rahulganesh.kakaraparthy@gmail.com | 📱 +1 647-739-5277</Text>
-          <Text style={styles.contact}>📍 Toronto, Ontario, M3C0C6</Text>
         </View>
-        <View style={styles.headerRight}>
-          <Text style={styles.contact}>🌐 www.linkedin.com/in/rahul-kakaraparthy-782437138</Text>
-          <Text style={styles.contact}>💼 https://rahulkakaraparthy.github.io/portfolio/</Text>
+        <View style={styles.headerBottom}>
+          <View style={styles.headerLeft}>
+            <Text style={styles.contact}>📧 rahulganesh.kakaraparthy@gmail.com</Text>
+            <Text style={styles.contact}>📱 +1 647-739-5277 | 📍 Toronto, Ontario</Text>
+          </View>
+          <View style={styles.headerRight}>
+            <Text style={styles.contact}>🌐 linkedin.com/in/rahul-kakaraparthy-782437138</Text>
+            <Text style={styles.contact}>💼 rahulkakaraparthy.github.io/portfolio</Text>
+          </View>
         </View>
       </View>
 
@@ -262,14 +272,9 @@ const ResumePDF = () => (
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Technical Skills</Text>
         
-        <Text style={styles.skillCategory}>Azure Cloud Services</Text>
-        <Text style={styles.skillList}>• Azure Platform: AKS (Azure Kubernetes Service), ACR (Azure Container Registry), Key Vault, Azure Monitor</Text>
-        <Text style={styles.skillList}>• Azure DevOps Suite: Azure Pipelines, Azure Repos, Azure Boards</Text>
-        <Text style={styles.skillList}>• Security: Azure Key Vault, Azure Security Center, Azure Sentinel</Text>
-
         <Text style={styles.skillCategory}>Cloud Platforms & Infrastructure</Text>
+        <Text style={styles.skillList}>• Azure: AKS, ACR, Key Vault, Monitor, DevOps, App Service, Functions</Text>
         <Text style={styles.skillList}>• AWS: EC2, S3, Route53, VPC, IAM, CloudWatch, Step Functions, Lambda, RDS</Text>
-        <Text style={styles.skillList}>• Azure: AKS, Azure DevOps, App Service, Azure Functions, Storage Accounts</Text>
         <Text style={styles.skillList}>• Infrastructure as Code: Terraform, CloudFormation, ARM Templates</Text>
 
         <Text style={styles.skillCategory}>CI/CD & Automation</Text>
@@ -282,32 +287,18 @@ const ResumePDF = () => (
         <Text style={styles.skillList}>• Orchestration: Kubernetes, AKS, Container orchestration at scale</Text>
         <Text style={styles.skillList}>• GitOps: Argo CD for continuous deployment and GitOps workflows</Text>
 
-        <Text style={styles.skillCategory}>Programming & Scripting</Text>
-        <Text style={styles.skillList}>• Scripting Languages: Groovy (Jenkins pipelines), Shell/Bash, Python, PowerShell</Text>
-        <Text style={styles.skillList}>• Configuration: YAML, JSON, configuration management</Text>
-        <Text style={styles.skillList}>• API Integration: REST APIs, Azure Resource Manager APIs</Text>
-
-        <Text style={styles.skillCategory}>Security & Compliance</Text>
-        <Text style={styles.skillList}>• Security Scanning: Veracode, Checkmarx, CXOne (CheckMarx One), Trivy</Text>
-        <Text style={styles.skillList}>• Vulnerability Management: SAST/DAST integration, security pipeline automation</Text>
-        <Text style={styles.skillList}>• Secrets Management: Azure Key Vault, AWS Secrets Manager</Text>
-
-        <Text style={styles.skillCategory}>Monitoring & Observability</Text>
-        <Text style={styles.skillList}>• Azure Monitoring: Azure Monitor, Application Insights, Log Analytics</Text>
-        <Text style={styles.skillList}>• AWS Monitoring: CloudWatch, AWS Config, Systems Manager</Text>
-        <Text style={styles.skillList}>• Log Management: Centralized logging, log analysis and correlation</Text>
+        <Text style={styles.skillCategory}>Programming & Security</Text>
+        <Text style={styles.skillList}>• Scripting: Groovy (Jenkins), Shell/Bash, Python, PowerShell</Text>
+        <Text style={styles.skillList}>• Security Scanning: Veracode, Checkmarx, CXOne, Trivy</Text>
+        <Text style={styles.skillList}>• Monitoring: Azure Monitor, CloudWatch, ELK Stack, Prometheus</Text>
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Education</Text>
         <Text style={styles.education}>Bachelor of Technology – Computer Science Engineering</Text>
         <Text style={styles.education}>Jawaharlal Nehru Technological University (JNTU), India | 2015</Text>
-        <Text style={styles.education}>Relevant Coursework: Distributed Systems, Database Design, Network Security</Text>
       </View>
-    </Page>
 
-    {/* Page 3: Professional Experience */}
-    <Page size="A4" style={styles.page}>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Professional Experience</Text>
         
@@ -316,19 +307,10 @@ const ResumePDF = () => (
           <Text style={styles.company}>FIS | Remote, Canada</Text>
           <Text style={styles.period}>Feb 2022 – Present</Text>
           
-          <Text style={styles.subsectionTitle}>CI/CD Pipeline Architecture & Automation</Text>
           <Text style={styles.bullet}>• Lead design and implementation of automated CI/CD pipelines using Jenkins with Groovy scripting and Argo CD, reducing deployment cycle time by 40%</Text>
-          <Text style={styles.bullet}>• Architected GitOps workflows with Argo CD for Kubernetes deployments, enabling continuous delivery and configuration drift detection</Text>
-          <Text style={styles.bullet}>• Integrated Nexus Repository Manager for artifact management and dependency caching, improving build performance by 50%</Text>
-          
-          <Text style={styles.subsectionTitle}>Azure Cloud Infrastructure Management</Text>
           <Text style={styles.bullet}>• Manage and scale cloud infrastructure in Azure using Terraform, enforcing Infrastructure-as-Code across 100+ resources</Text>
           <Text style={styles.bullet}>• Implemented Azure monitoring solutions using Azure Monitor and Application Insights for comprehensive observability</Text>
-          <Text style={styles.bullet}>• Designed resilient containerized deployments using Docker and Kubernetes on AKS, ensuring high availability</Text>
-          
-          <Text style={styles.subsectionTitle}>Technical Achievements</Text>
           <Text style={styles.bullet}>• Achieved 99.99% system uptime across all production environments through robust infrastructure design</Text>
-          <Text style={styles.bullet}>• Reduced manual deployment errors by 85% through comprehensive CI/CD automation</Text>
           <Text style={styles.bullet}>• Mentored junior engineers on DevOps best practices, cloud technologies, and automation frameworks</Text>
         </View>
 
@@ -337,19 +319,9 @@ const ResumePDF = () => (
           <Text style={styles.company}>Fidelity Investments | Canada</Text>
           <Text style={styles.period}>Mar 2019 – Feb 2022</Text>
           
-          <Text style={styles.subsectionTitle}>AWS Cloud Architecture & Infrastructure</Text>
           <Text style={styles.bullet}>• Designed and deployed scalable, fault-tolerant systems on AWS including EC2, VPC, S3, and Step Functions serving 50,000+ users</Text>
-          <Text style={styles.bullet}>• Built highly available VPCs from scratch, applying enterprise-grade security via IAM policies and Security Groups</Text>
-          <Text style={styles.bullet}>• Configured DNS failover and health checks with Route53 to ensure 99.9% availability of customer-facing applications</Text>
-          
-          <Text style={styles.subsectionTitle}>Infrastructure Automation & Monitoring</Text>
           <Text style={styles.bullet}>• Automated infrastructure provisioning with Terraform, improving delivery consistency and reducing manual errors by 70%</Text>
-          <Text style={styles.bullet}>• Developed comprehensive CI/CD pipelines integrating Jenkins, Nexus, and Ansible for seamless application delivery</Text>
-          <Text style={styles.bullet}>• Spearheaded monitoring and alerting implementation with CloudWatch, improving incident response times from hours to minutes</Text>
-          
-          <Text style={styles.subsectionTitle}>Key Projects</Text>
           <Text style={styles.bullet}>• Successfully migrated 25+ enterprise applications from on-premises to AWS with zero data loss</Text>
-          <Text style={styles.bullet}>• Implemented automated compliance reporting system reducing audit preparation time from weeks to days</Text>
           <Text style={styles.bullet}>• Led cloud migration initiatives reducing infrastructure costs by 45% while improving performance</Text>
         </View>
 
@@ -358,24 +330,20 @@ const ResumePDF = () => (
           <Text style={styles.company}>Accenture | Hyderabad, India</Text>
           <Text style={styles.period}>Aug 2016 – Jan 2019</Text>
           
-          <Text style={styles.bullet}>• Created and managed virtualized environments using VMware and VirtualBox for development and testing purposes</Text>
           <Text style={styles.bullet}>• Automated AWS infrastructure provisioning reducing deployment time from days to hours using scripted solutions</Text>
           <Text style={styles.bullet}>• Developed bash and Python automation scripts, reducing routine manual tasks by 50%</Text>
-          <Text style={styles.bullet}>• Configured comprehensive CloudWatch alerts and SNS notifications, enabling proactive monitoring</Text>
           <Text style={styles.bullet}>• Contributed to large-scale cloud transformation projects enabling $2M+ annual cost savings</Text>
-          <Text style={styles.bullet}>• Managed Linux/Unix server environments supporting mission-critical applications for Fortune 500 clients</Text>
         </View>
       </View>
     </Page>
 
-    {/* Page 4: Projects, Achievements & Leadership */}
+    {/* Page 3: Projects, Achievements & Additional Information */}
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Notable Technical Projects</Text>
         
         <View style={styles.projectItem}>
           <Text style={styles.subsectionTitle}>Enterprise DevOps Platform Transformation</Text>
-          <Text style={styles.bullet}>Technologies: Jenkins, Groovy, Argo CD, Azure AKS, Terraform</Text>
           <Text style={styles.bullet}>• Led complete DevOps platform transformation at FIS supporting 200+ developers across multiple teams</Text>
           <Text style={styles.bullet}>• Implemented GitOps workflows with Argo CD reducing deployment time by 40% and improving reliability to 99.99%</Text>
           <Text style={styles.bullet}>• Achieved company-wide adoption of Infrastructure as Code practices using Terraform</Text>
@@ -383,7 +351,6 @@ const ResumePDF = () => (
 
         <View style={styles.projectItem}>
           <Text style={styles.subsectionTitle}>Multi-Cloud Infrastructure Automation</Text>
-          <Text style={styles.bullet}>Technologies: Terraform, AWS, Azure, CloudWatch, Jenkins, Python</Text>
           <Text style={styles.bullet}>• Designed multi-cloud infrastructure spanning AWS and Azure for disaster recovery and load distribution</Text>
           <Text style={styles.bullet}>• Created standardized Terraform modules reducing setup time by 75%</Text>
           <Text style={styles.bullet}>• Built automated monitoring systems processing 10GB+ of logs daily with real-time notifications</Text>
@@ -391,7 +358,6 @@ const ResumePDF = () => (
 
         <View style={styles.projectItem}>
           <Text style={styles.subsectionTitle}>Financial Services Cloud Migration</Text>
-          <Text style={styles.bullet}>Technologies: AWS, Route53, VPC, IAM, CloudWatch, Ansible</Text>
           <Text style={styles.bullet}>• Successfully migrated critical financial applications serving 100,000+ daily users</Text>
           <Text style={styles.bullet}>• Designed highly available, fault-tolerant architecture with multi-AZ deployment and automated failover</Text>
           <Text style={styles.bullet}>• Reduced infrastructure costs by 45% while improving application performance and scalability</Text>
@@ -421,26 +387,18 @@ const ResumePDF = () => (
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Professional Certifications & Development</Text>
-        <Text style={styles.highlight}>• AWS Certified Solutions Architect – Associate (In Progress)</Text>
-        <Text style={styles.highlight}>• Microsoft Azure Fundamentals (AZ-900) (Planned)</Text>
-        <Text style={styles.highlight}>• Certified Kubernetes Administrator (CKA) (Planned)</Text>
-        <Text style={styles.highlight}>• HashiCorp Terraform Associate (Planned)</Text>
-        <Text style={styles.highlight}>• Active participant in DevOps and Cloud Native Computing Foundation (CNCF) communities</Text>
-        <Text style={styles.highlight}>• Regular attendee of KubeCon, DockerCon, and AWS re:Invent conferences</Text>
-      </View>
-
-      <View style={styles.section}>
         <Text style={styles.sectionTitle}>Additional Information</Text>
         <Text style={styles.highlight}>• Authorized to work in Canada (Permanent Resident)</Text>
         <Text style={styles.highlight}>• Available for relocation and remote work opportunities</Text>
         <Text style={styles.highlight}>• Languages: English (Fluent), Telugu (Native), Hindi (Conversational)</Text>
         <Text style={styles.highlight}>• Strong technical writing and documentation skills</Text>
         <Text style={styles.highlight}>• Experience presenting to technical and non-technical stakeholders</Text>
+        <Text style={styles.highlight}>• Active participant in DevOps and Cloud Native Computing Foundation (CNCF) communities</Text>
+        <Text style={styles.highlight}>• Regular attendee of KubeCon, DockerCon, and AWS re:Invent conferences</Text>
       </View>
 
-      <View style={{ marginTop: 15, textAlign: 'center', borderTopWidth: 1, borderTopColor: '#ccc', paddingTop: 8 }}>
-        <Text style={{ fontSize: 7, fontStyle: 'italic' }}>
+      <View style={{ marginTop: 20, textAlign: 'center', borderTopWidth: 1, borderTopColor: '#ccc', paddingTop: 10 }}>
+        <Text style={{ fontSize: 9, fontStyle: 'italic' }}>
           References available upon request | Portfolio: https://rahulkakaraparthy.github.io/portfolio/
         </Text>
       </View>
