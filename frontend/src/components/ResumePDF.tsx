@@ -411,7 +411,6 @@ const ResumePDF = () => (
         <Text style={styles.highlight}>• Strong technical writing and documentation skills</Text>
         <Text style={styles.highlight}>• Experience presenting to technical and non-technical stakeholders</Text>
         <Text style={styles.highlight}>• Active participant in DevOps and Cloud Native Computing Foundation (CNCF) communities</Text>
-        <Text style={styles.highlight}>• Regular attendee of KubeCon, DockerCon, and AWS re:Invent conferences</Text>
       </View>
 
       <View style={{ marginTop: 20, textAlign: 'center', borderTopWidth: 1, borderTopColor: '#ccc', paddingTop: 10 }}>
