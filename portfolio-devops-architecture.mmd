@@ -1,0 +1,17 @@
+graph TD
+    A[Developer Pushes to GitHub] -->|CI Trigger| B[GitHub Actions CI/CD]
+    B --> C[Build Frontend (Vite/React)]
+    B --> D[Build Backend (Node.js/Express)]
+    C --> E[Docker Build Frontend Image]
+    D --> F[Docker Build Backend Image]
+    E --> G[Push Frontend Image to Registry]
+    F --> H[Push Backend Image to Registry]
+    G --> I[Deploy Frontend to GitHub Pages]
+    H --> J[Deploy Backend to Server (Docker Compose)]
+    I --> K[User Accesses Portfolio Website]
+    J --> K
+
+%% Notes:
+%% - Frontend is deployed to GitHub Pages (static hosting)
+%% - Backend is containerized and can be deployed to any Docker-compatible server
+%% - CI/CD is fully automated via GitHub Actions

@@ -156,13 +156,13 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   experienceItem: {
-    marginBottom: 6,
+    marginBottom: 5,
   },
   section: {
-    marginBottom: 6,
+    marginBottom: 5,
   },
   projectItem: {
-    marginBottom: 4,
+    marginBottom: 3,
   },
   achievementItem: {
     fontSize: 9,
@@ -335,26 +335,6 @@ const ResumePDF = () => (
           <Text style={styles.bullet}>• Contributed to large-scale cloud transformation projects enabling $2M+ annual cost savings</Text>
         </View>
       </View>
-    </Page>
-
-    {/* Page 3: Projects, Achievements & Additional Information */}
-    <Page size="A4" style={styles.page}>
-      <View style={styles.header}>
-        <View style={styles.headerTop}>
-          <Text style={styles.name}>Rahul Kakaraparthy</Text>
-          <Text style={styles.title}>Senior DevOps Engineer | Cloud Infrastructure Architect</Text>
-        </View>
-        <View style={styles.headerBottom}>
-          <View style={styles.headerLeft}>
-            <Text style={styles.contact}>Email: rahulganesh.kakaraparthy@gmail.com</Text>
-            <Text style={styles.contact}>Phone: +1 647-739-5277 | Location: Toronto, Ontario</Text>
-          </View>
-          <View style={styles.headerRight}>
-            <Text style={styles.contact}>LinkedIn: linkedin.com/in/rahul-kakaraparthy-782437138</Text>
-            <Text style={styles.contact}>Portfolio: rahulkakaraparthy.github.io/portfolio</Text>
-          </View>
-        </View>
-      </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Notable Technical Projects</Text>
@@ -380,9 +360,29 @@ const ResumePDF = () => (
           <Text style={styles.bullet}>• Reduced infrastructure costs by 45% while improving application performance and scalability</Text>
         </View>
       </View>
+    </Page>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Technical Leadership & Mentoring</Text>
+    {/* Page 3: Leadership, Achievements & Additional Information */}
+    <Page size="A4" style={styles.page}>
+      <View style={styles.header}>
+        <View style={styles.headerTop}>
+          <Text style={styles.name}>Rahul Kakaraparthy</Text>
+          <Text style={styles.title}>Senior DevOps Engineer | Cloud Infrastructure Architect</Text>
+        </View>
+        <View style={styles.headerBottom}>
+          <View style={styles.headerLeft}>
+            <Text style={styles.contact}>Email: rahulganesh.kakaraparthy@gmail.com</Text>
+            <Text style={styles.contact}>Phone: +1 647-739-5277 | Location: Toronto, Ontario</Text>
+          </View>
+          <View style={styles.headerRight}>
+            <Text style={styles.contact}>LinkedIn: linkedin.com/in/rahul-kakaraparthy-782437138</Text>
+            <Text style={styles.contact}>Portfolio: rahulkakaraparthy.github.io/portfolio</Text>
+          </View>
+        </View>
+      </View>
+
+      <View style={[styles.section, { marginTop: 8 }]}>
+        <Text style={[styles.sectionTitle, { marginBottom: 3 }]}>Technical Leadership & Mentoring</Text>
         <Text style={styles.highlight}>• DevOps Transformation Leader: Spearheaded organization-wide adoption of DevOps practices and cloud-native technologies</Text>
         <Text style={styles.highlight}>• Infrastructure Modernization: Led teams in migrating legacy applications to modern cloud-native architectures</Text>
         <Text style={styles.highlight}>• Automation Champion: Established automation-first culture reducing manual operations by 80% across teams</Text>
