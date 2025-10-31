@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   page: {
     padding: 20,
     backgroundColor: 'white',
-    fontSize: 9,
+    fontSize: 10,
     lineHeight: 1.3,
     fontFamily: 'Helvetica',
   },
@@ -18,42 +18,42 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
   },
   coverName: {
-    fontSize: 18,
+    fontSize: 19,
     fontWeight: 'bold',
     marginBottom: 3,
   },
   coverTitle: {
-    fontSize: 12,
+    fontSize: 13,
     marginBottom: 3,
     fontStyle: 'italic',
   },
   coverContact: {
-    fontSize: 9,
+    fontSize: 10,
     marginBottom: 1,
   },
   coverDate: {
     textAlign: 'right',
     marginBottom: 12,
-    fontSize: 9,
+    fontSize: 10,
   },
   coverSalutation: {
     marginBottom: 8,
-    fontSize: 9,
+    fontSize: 10,
     fontWeight: 'bold',
   },
   coverParagraph: {
-    fontSize: 9,
+    fontSize: 10,
     lineHeight: 1.4,
     marginBottom: 8,
     textAlign: 'justify',
   },
   coverClosing: {
     marginTop: 15,
-    fontSize: 9,
+    fontSize: 10,
     fontWeight: 'bold',
   },
   signature: {
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: 'bold',
     marginTop: 10,
   },
@@ -82,21 +82,21 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   name: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: 'bold',
     marginBottom: 2,
   },
   title: {
-    fontSize: 11,
+    fontSize: 12,
     marginBottom: 4,
     fontStyle: 'italic',
   },
   contact: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 1,
   },
   sectionTitle: {
-    fontSize: 11,
+    fontSize: 12,
     marginBottom: 4,
     fontWeight: 'bold',
     backgroundColor: '#f0f0f0',
@@ -104,54 +104,54 @@ const styles = StyleSheet.create({
     marginTop: 6,
   },
   paragraph: {
-    fontSize: 8,
+    fontSize: 9,
     lineHeight: 1.3,
     marginBottom: 4,
     textAlign: 'justify',
   },
   subsectionTitle: {
-    fontSize: 9,
+    fontSize: 10,
     fontWeight: 'bold',
     marginBottom: 2,
     marginTop: 3,
   },
   jobTitle: {
-    fontSize: 9,
+    fontSize: 10,
     fontWeight: 'bold',
     marginBottom: 1,
   },
   company: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 1,
     fontStyle: 'italic',
   },
   period: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 2,
     color: '#666',
   },
   bullet: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 1,
     marginLeft: 8,
     lineHeight: 1.2,
   },
   skillCategory: {
-    fontSize: 8,
+    fontSize: 9,
     fontWeight: 'bold',
     marginBottom: 2,
   },
   skillList: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 1,
     marginLeft: 8,
   },
   education: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 2,
   },
   highlight: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 1,
     marginLeft: 8,
   },
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   achievementItem: {
-    fontSize: 8,
+    fontSize: 9,
     marginBottom: 1,
     marginLeft: 8,
   },
@@ -178,9 +178,9 @@ const ResumePDF = () => (
       <View style={styles.coverHeader}>
         <Text style={styles.coverName}>Rahul Kakaraparthy</Text>
         <Text style={styles.coverTitle}>Senior DevOps Engineer | Cloud Infrastructure Architect</Text>
-        <Text style={styles.coverContact}>📧 rahulganesh.kakaraparthy@gmail.com | 📱 +1 647-739-5277 | 📍 Toronto, Ontario, M3C0C6</Text>
-        <Text style={styles.coverContact}>🌐 LinkedIn: www.linkedin.com/in/rahul-kakaraparthy-782437138</Text>
-        <Text style={styles.coverContact}>💼 Portfolio: https://rahulkakaraparthy.github.io/portfolio/</Text>
+        <Text style={styles.coverContact}>Email: rahulganesh.kakaraparthy@gmail.com | Phone: +1 647-739-5277 | Location: Toronto, Ontario, M3C0C6</Text>
+        <Text style={styles.coverContact}>LinkedIn: www.linkedin.com/in/rahul-kakaraparthy-782437138</Text>
+        <Text style={styles.coverContact}>Portfolio: https://rahulkakaraparthy.github.io/portfolio/</Text>
       </View>
 
       <Text style={styles.coverDate}>October 31, 2025</Text>
@@ -244,12 +244,12 @@ const ResumePDF = () => (
         </View>
         <View style={styles.headerBottom}>
           <View style={styles.headerLeft}>
-            <Text style={styles.contact}>📧 rahulganesh.kakaraparthy@gmail.com</Text>
-            <Text style={styles.contact}>📱 +1 647-739-5277 | 📍 Toronto, Ontario</Text>
+            <Text style={styles.contact}>Email: rahulganesh.kakaraparthy@gmail.com</Text>
+            <Text style={styles.contact}>Phone: +1 647-739-5277 | Location: Toronto, Ontario</Text>
           </View>
           <View style={styles.headerRight}>
-            <Text style={styles.contact}>🌐 linkedin.com/in/rahul-kakaraparthy-782437138</Text>
-            <Text style={styles.contact}>💼 rahulkakaraparthy.github.io/portfolio</Text>
+            <Text style={styles.contact}>LinkedIn: linkedin.com/in/rahul-kakaraparthy-782437138</Text>
+            <Text style={styles.contact}>Portfolio: rahulkakaraparthy.github.io/portfolio</Text>
           </View>
         </View>
       </View>
@@ -376,14 +376,14 @@ const ResumePDF = () => (
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Key Achievements & Metrics</Text>
-        <Text style={styles.achievementItem}>🏆 Infrastructure Reliability: Delivered 99.99% uptime for production systems through resilient cloud infrastructure design</Text>
-        <Text style={styles.achievementItem}>🚀 Deployment Excellence: Improved deployment speed by 40% and reduced manual errors through comprehensive CI/CD automation</Text>
-        <Text style={styles.achievementItem}>💰 Cost Optimization: Achieved infrastructure cost savings of $2M+ annually through rightsizing and automation</Text>
-        <Text style={styles.achievementItem}>🔒 Security Excellence: Maintained zero critical security incidents through proactive monitoring and automated remediation</Text>
-        <Text style={styles.achievementItem}>📈 Performance Enhancement: Led enterprise DevOps adoption enhancing release efficiency and developer productivity by 60%</Text>
-        <Text style={styles.achievementItem}>🌐 Cloud Transformation: Successfully completed cloud migration projects for 50+ applications with zero data loss</Text>
-        <Text style={styles.achievementItem}>👥 Team Development: Trained and mentored 15+ engineers in modern DevOps practices and cloud technologies</Text>
-        <Text style={styles.achievementItem}>🛠️ Automation Impact: Reduced routine manual tasks by 70% through comprehensive automation and scripting solutions</Text>
+        <Text style={styles.achievementItem}>• Infrastructure Reliability: Delivered 99.99% uptime for production systems through resilient cloud infrastructure design</Text>
+        <Text style={styles.achievementItem}>• Deployment Excellence: Improved deployment speed by 40% and reduced manual errors through comprehensive CI/CD automation</Text>
+        <Text style={styles.achievementItem}>• Cost Optimization: Achieved infrastructure cost savings of $2M+ annually through rightsizing and automation</Text>
+        <Text style={styles.achievementItem}>• Security Excellence: Maintained zero critical security incidents through proactive monitoring and automated remediation</Text>
+        <Text style={styles.achievementItem}>• Performance Enhancement: Led enterprise DevOps adoption enhancing release efficiency and developer productivity by 60%</Text>
+        <Text style={styles.achievementItem}>• Cloud Transformation: Successfully completed cloud migration projects for 50+ applications with zero data loss</Text>
+        <Text style={styles.achievementItem}>• Team Development: Trained and mentored 15+ engineers in modern DevOps practices and cloud technologies</Text>
+        <Text style={styles.achievementItem}>• Automation Impact: Reduced routine manual tasks by 70% through comprehensive automation and scripting solutions</Text>
       </View>
 
       <View style={styles.section}>
@@ -398,7 +398,7 @@ const ResumePDF = () => (
       </View>
 
       <View style={{ marginTop: 20, textAlign: 'center', borderTopWidth: 1, borderTopColor: '#ccc', paddingTop: 10 }}>
-        <Text style={{ fontSize: 9, fontStyle: 'italic' }}>
+        <Text style={{ fontSize: 10, fontStyle: 'italic' }}>
           References available upon request | Portfolio: https://rahulkakaraparthy.github.io/portfolio/
         </Text>
       </View>
