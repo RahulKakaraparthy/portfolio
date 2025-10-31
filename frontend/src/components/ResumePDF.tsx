@@ -364,7 +364,7 @@ const ResumePDF = () => (
 
     {/* Page 3: Leadership, Achievements & Additional Information */}
     <Page size="A4" style={styles.page}>
-      <View style={styles.header}>
+      <View style={[styles.header, { marginBottom: 6, paddingBottom: 4 }]}>
         <View style={styles.headerTop}>
           <Text style={styles.name}>Rahul Kakaraparthy</Text>
           <Text style={styles.title}>Senior DevOps Engineer | Cloud Infrastructure Architect</Text>
@@ -381,8 +381,8 @@ const ResumePDF = () => (
         </View>
       </View>
 
-      <View style={[styles.section, { marginTop: 8 }]}>
-        <Text style={[styles.sectionTitle, { marginBottom: 3 }]}>Technical Leadership & Mentoring</Text>
+      <View style={[styles.section, { marginTop: 2 }]}>
+        <Text style={[styles.sectionTitle, { marginBottom: 2 }]}>Technical Leadership & Mentoring</Text>
         <Text style={styles.highlight}>• DevOps Transformation Leader: Spearheaded organization-wide adoption of DevOps practices and cloud-native technologies</Text>
         <Text style={styles.highlight}>• Infrastructure Modernization: Led teams in migrating legacy applications to modern cloud-native architectures</Text>
         <Text style={styles.highlight}>• Automation Champion: Established automation-first culture reducing manual operations by 80% across teams</Text>
@@ -391,8 +391,8 @@ const ResumePDF = () => (
         <Text style={styles.highlight}>• Process Innovation: Designed automated workflows improving developer productivity by 60%</Text>
       </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Key Achievements & Metrics</Text>
+      <View style={[styles.section, { marginBottom: 3 }]}>
+        <Text style={[styles.sectionTitle, { marginBottom: 2 }]}>Key Achievements & Metrics</Text>
         <Text style={styles.achievementItem}>• Infrastructure Reliability: Delivered 99.99% uptime for production systems through resilient cloud infrastructure design</Text>
         <Text style={styles.achievementItem}>• Deployment Excellence: Improved deployment speed by 40% and reduced manual errors through comprehensive CI/CD automation</Text>
         <Text style={styles.achievementItem}>• Cost Optimization: Achieved infrastructure cost savings of $2M+ annually through rightsizing and automation</Text>
@@ -403,8 +403,8 @@ const ResumePDF = () => (
         <Text style={styles.achievementItem}>• Automation Impact: Reduced routine manual tasks by 70% through comprehensive automation and scripting solutions</Text>
       </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Additional Information</Text>
+      <View style={[styles.section, { marginBottom: 3 }]}>
+        <Text style={[styles.sectionTitle, { marginBottom: 2 }]}>Additional Information</Text>
         <Text style={styles.highlight}>• Authorized to work in Canada (Permanent Resident)</Text>
         <Text style={styles.highlight}>• Available for relocation and remote work opportunities</Text>
         <Text style={styles.highlight}>• Languages: English (Fluent), Telugu (Native), Hindi (Conversational)</Text>
@@ -412,7 +412,7 @@ const ResumePDF = () => (
         <Text style={styles.highlight}>• Experience presenting to technical and non-technical stakeholders</Text>
       </View>
 
-      <View style={{ marginTop: 20, textAlign: 'center', borderTopWidth: 1, borderTopColor: '#ccc', paddingTop: 10 }}>
+      <View style={{ marginTop: 10, textAlign: 'center', borderTopWidth: 1, borderTopColor: '#ccc', paddingTop: 6 }}>
         <Text style={{ fontSize: 10, fontStyle: 'italic' }}>
           References available upon request | Portfolio: https://rahulkakaraparthy.github.io/portfolio/
         </Text>
