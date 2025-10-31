@@ -84,11 +84,11 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 17,
     fontWeight: 'bold',
-    marginBottom: 2,
+    marginBottom: 4,
   },
   title: {
     fontSize: 12,
-    marginBottom: 4,
+    marginBottom: 6,
     fontStyle: 'italic',
   },
   contact: {
@@ -339,6 +339,23 @@ const ResumePDF = () => (
 
     {/* Page 3: Projects, Achievements & Additional Information */}
     <Page size="A4" style={styles.page}>
+      <View style={styles.header}>
+        <View style={styles.headerTop}>
+          <Text style={styles.name}>Rahul Kakaraparthy</Text>
+          <Text style={styles.title}>Senior DevOps Engineer | Cloud Infrastructure Architect</Text>
+        </View>
+        <View style={styles.headerBottom}>
+          <View style={styles.headerLeft}>
+            <Text style={styles.contact}>Email: rahulganesh.kakaraparthy@gmail.com</Text>
+            <Text style={styles.contact}>Phone: +1 647-739-5277 | Location: Toronto, Ontario</Text>
+          </View>
+          <View style={styles.headerRight}>
+            <Text style={styles.contact}>LinkedIn: linkedin.com/in/rahul-kakaraparthy-782437138</Text>
+            <Text style={styles.contact}>Portfolio: rahulkakaraparthy.github.io/portfolio</Text>
+          </View>
+        </View>
+      </View>
+
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Notable Technical Projects</Text>
         
