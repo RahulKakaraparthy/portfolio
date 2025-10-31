@@ -382,16 +382,6 @@ const ResumePDF = () => (
       </View>
 
       <View style={[styles.section, { marginTop: 2 }]}>
-        <Text style={[styles.sectionTitle, { marginBottom: 2 }]}>Technical Leadership & Mentoring</Text>
-        <Text style={styles.highlight}>• DevOps Transformation Leader: Spearheaded organization-wide adoption of DevOps practices and cloud-native technologies</Text>
-        <Text style={styles.highlight}>• Infrastructure Modernization: Led teams in migrating legacy applications to modern cloud-native architectures</Text>
-        <Text style={styles.highlight}>• Automation Champion: Established automation-first culture reducing manual operations by 80% across teams</Text>
-        <Text style={styles.highlight}>• Knowledge Sharing: Created comprehensive documentation, training materials, and best practices guidelines</Text>
-        <Text style={styles.highlight}>• Team Mentoring: Mentored 12+ engineers in cloud technologies, DevOps practices, and automation frameworks</Text>
-        <Text style={styles.highlight}>• Process Innovation: Designed automated workflows improving developer productivity by 60%</Text>
-      </View>
-
-      <View style={[styles.section, { marginBottom: 3 }]}>
         <Text style={[styles.sectionTitle, { marginBottom: 2 }]}>Key Achievements & Metrics</Text>
         <Text style={styles.achievementItem}>• Infrastructure Reliability: Delivered 99.99% uptime for production systems through resilient cloud infrastructure design</Text>
         <Text style={styles.achievementItem}>• Deployment Excellence: Improved deployment speed by 40% and reduced manual errors through comprehensive CI/CD automation</Text>
